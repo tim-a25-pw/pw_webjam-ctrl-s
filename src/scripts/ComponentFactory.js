@@ -1,7 +1,19 @@
+import Header from "./components/Header.js";
+import Carousel from "./components/Carousel.js";
+import Scrolly from "./components/Scrolly.js";
+import Youtube from "./components/Youtube.js";
+import Accordion from "./components/Accordion.js";
+
 export default class ComponentFactory {
   constructor() {
     this.componentInstances = [];
-    this.componentList = {};
+    this.componentList = {
+      Header,
+      Carousel,
+      Scrolly,
+      Youtube,
+      Accordion,
+    };
     this.init();
   }
   init() {

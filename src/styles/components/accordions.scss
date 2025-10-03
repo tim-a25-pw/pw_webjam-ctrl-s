@@ -1,0 +1,55 @@
+/* ==========================================================================
+   accordeons / COMPONENTS
+   ========================================================================== */
+
+.accordeons{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    p{
+        margin: 0;
+    }    
+}
+
+.accordion__container{
+    background-color: var(--color-white);
+    border-radius: 8px;
+    border: solid 1px var(--color-dark-gray);
+
+    .accordion__header{
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+        font-weight: 700;
+        font-size: #{typo(20px, 24px)};
+
+        .icon-up{
+            display: none;
+        }
+    }
+
+    .accordion__content{
+        display: none;
+    }
+    
+    &.is-active_ac{
+    .accordion__header{
+        .icon-up{
+            display: block;
+        }
+
+        .icon-down{
+            display: none;
+        }
+    }
+
+    .accordion__content{
+        display: block;
+            padding: 30px;
+            border-top: 1px solid var(--color-dark-gray);
+            font-size: #{typo(16px, 18px)};
+        }        
+}
+}
+
