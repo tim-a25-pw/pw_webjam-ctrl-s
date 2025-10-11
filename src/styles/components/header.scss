@@ -5,15 +5,18 @@
 .header {
     --header-height: 100px;
 
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 var(--spacing-sm);
     position: sticky;
     top: 0;
     height: var(--header-height);
     z-index: 10;
     transition: transform .4s $ease-out-expo;
+
+    .wrapper{
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+    }
 
     &::before {
         content: '';
@@ -38,6 +41,11 @@
     max-width: 200px;
     position: relative;
     z-index: 10;
+
+    .icon__brand{
+        width: 12.5em;
+        height: 4.4em;
+    }
 }
 
 // Mettre ton .header__toggle ici
