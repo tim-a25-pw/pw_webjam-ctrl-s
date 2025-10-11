@@ -1,45 +1,78 @@
-.hero{
-    height: 85vh;
+.hero-accueil {
     position: relative;
 
-    .wrapper{
+    .wrapper {
         height: 100%;
     }
 
-    .hero__media{
+    .hero-media {
         position: absolute;
         top: 0;
         left: 0;
+        z-index: 1;
+        object-fit: cover;
+        img {
+            display: block;
+        }
     }
 
-    .hero__content{
+    .hero-content {
         height: 100%;
         display: flex;
         flex-direction: column;
         gap: 32px;
+        position: relative;
+        z-index: 5;
+        color: var(--color-black);
+        padding-top: 325px;
+        .hero-title {
+            .hero-title-indent {
+                padding-left: 150px;
+            }
+        }
+        .hero-intro {
+            max-width: 28vw;
+            p {
+                margin: 18px 0;
+            }
+        }
+        h2 {
+            font-family: var(--font-secondary);
+        }
+        p {
+            margin: 0;
+        }
+        .hero-down {
+            align-self: center;
+            .hero-scrolldown {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     }
 }
 
-.hero-music{
-    .hero__media{
+.hero-music {
+    .hero__media {
         top: auto;
         bottom: 0;
         z-index: -1;
-        
-        img{
+
+        img {
             width: 100%;
         }
     }
 
-    .hero__content{
-        h1{
+    .hero__content {
+        h1 {
             font-size: typo(152px);
-            font-family: "MuseoModerno", sans-serif;
+            font-family: 'MuseoModerno', sans-serif;
             font-weight: 400;
             margin-top: 50px;
         }
 
-        p{
+        p {
             width: 30%;
         }
     }
