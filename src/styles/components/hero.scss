@@ -82,3 +82,37 @@
         }
     }
 }
+
+.hero-lecture{
+    height: 80vh;
+
+    .wrapper{
+        display: flex;
+        gap: 48px;
+    }
+
+    .hero__media{
+        height: 100%;
+        width: 80%;
+
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .hero__content {
+        h1 {
+            font-size: typo(152px);
+            font-family: 'MuseoModerno', sans-serif;
+            font-weight: 400;
+            margin-top: 50px;
+            margin-bottom: 48px;
+        }
+
+        p{
+            margin: 0;
+            width: 50%;
+        }
+    }
+}

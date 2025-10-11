@@ -29,4 +29,8 @@
 .swiper-pagination-bullet-active {
     transform: scale(1.05);
     background-color: var(--color-blue);
+
+    .orange &{
+        background-color: var(--color-orange);
+    }
 }

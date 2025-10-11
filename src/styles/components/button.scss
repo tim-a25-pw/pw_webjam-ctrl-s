@@ -11,6 +11,12 @@
     }
 }
 
+.orange + .btn {
+    &:hover{
+        background-color: var(--color-orange);
+    }
+}
+
 .btn_footer{
     color: var(--color-black);
     border: var(--color-black) 2px solid; 
