@@ -3,11 +3,14 @@
    ========================================================================== */
 /// Font family
 :root {
-    --font-primary: 'Montserrat', sans-serif;
-    --font-secondary: 'Fira Code', monospace;
+    --font-primary: "Poppins", sans-serif;
+    --font-secondary: "Bebas Neue", sans-serif;
 
     --font-size-content: #{typo(16px, 18px)};
 
     /// Grosseur des textes
-    --font-size-h1: #{typo(28px, 42px)};
+    --font-size-h1: #{typo(112px)};
+    --font-size-h2: #{typo(62px)};
+    --font-size-h3: #{typo(42px)};
+    --font-size-h4: #{typo(32px)};
 }
