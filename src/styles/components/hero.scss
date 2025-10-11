@@ -1,5 +1,6 @@
 .hero-accueil {
     position: relative;
+    height: 87vh;
 
     .wrapper {
         height: 100%;
@@ -11,20 +12,27 @@
         left: 0;
         z-index: 1;
         object-fit: cover;
+        height: 100%;
+        width: 100%;
         img {
             display: block;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
         }
     }
 
     .hero-content {
         height: 100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: end;
         gap: 32px;
         position: relative;
         z-index: 5;
         color: var(--color-black);
-        padding-top: 325px;
+
         .hero-title {
             .hero-title-indent {
                 padding-left: 150px;
