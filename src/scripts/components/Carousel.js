@@ -6,8 +6,9 @@ export default class Carousel {
     this.options = {
       slidesPerView: 1,
       spaceBetween: 20,
+      direction: 'horizontal',
       pagination: {
-        el: this.element.querySelector('.swiper-pagination'),
+        el: this.element.querySelector('.custom-pagination'),
       },
       navigation: {
         nextEl: this.element.querySelector('.swiper-button-next'),
@@ -50,6 +51,14 @@ export default class Carousel {
     if ('slides' in this.element.dataset) {
       this.options.slidesPerView =
         this.element.dataset.slides || this.options.slidesPerView;
+    }
+
+    if('direction' in this.element.dataset){
+      this.options.direction = this.element.dataset.direction;
+    }
+
+    if('space' in this.element.dataset){
+      this.options.spaceBetween = this.element.dataset.space;
     }
   }
 }

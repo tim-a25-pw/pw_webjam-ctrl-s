@@ -1,0 +1,17 @@
+.oeuvres{
+    .btn{
+        margin-top: 50px;
+        display: inline-block;
+    }
+}
+
+.vedette{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 50px;
+
+    .content{
+        width: 40%;
+    }
+}
