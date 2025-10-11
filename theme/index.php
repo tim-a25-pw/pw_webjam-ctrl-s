@@ -1,11 +1,15 @@
 <?php get_header(); ?>
-    
-    <div class="hero">
+
+    <section class="hero">
         <div class="wrapper">
-            <?php the_post_thumbnail(); ?>
-            <h1><?php the_title(); ?></h1>
-            <?php the_content(); ?>
+            <div class="hero__media">
+                <img src="" alt="">
+            </div>
+            <div class="hero__content">
+                <h1>Vision</h1>
+                <p>Ceci est une description</p>
+            </div>
         </div>
-    </div>
+    </section>
 
 <?php get_footer(); ?>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vision</title>
+
+    <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/styles/main.css" />
+
+    <script>
+        // À décommenter lorsque rendu dans le fichier .php pour que les icônes fonctionnent dans WP
+        // iconsPath = '<?php bloginfo('template_url') ?>/dist/';
+    </script>
+
+    <script src="scripts/vendors.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body <?php body_class(); ?>>
+
+    <header class="header" data-component="Header">
+        <div class="wrapper">
+            <a href="<?php bloginfo('url'); ?>" class="header__brand">
+                <svg class="icon icon__brand">
+                    <use href="#icon-logo"></use>
+                </svg>
+            </a>
+            <button class="header__toggle js-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-primary">
+                <ul>
+                    <li><a href="" class="nav-primary__item">Cinéma</a></li>
+                    <li><a href="music.html" class="nav-primary__item">Musique</a></li>
+                    <li><a href="" class="nav-primary__item">Lecture</a></li>
+                    <li><a href="" class="nav-primary__item">Équipe</a></li>
+                    <li><a href="" class="btn nav-primary__item">Soumettre une oeuvre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
