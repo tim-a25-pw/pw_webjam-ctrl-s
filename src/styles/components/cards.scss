@@ -6,21 +6,42 @@
         height: 100%;
         gap: 64px;
     }
-}
 
-.card__media{
-    aspect-ratio:  2 / 1.4;  
+    .card__media{
+        aspect-ratio:  2 / 1.4;  
 
-    img{
-        display: block;
-        width: 100%; 
-        height: 100%;                           
+        img{
+            display: block;
+            width: 100%; 
+            height: 100%;                           
+        }
+    }
+
+    .card__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 40%;
     }
 }
 
-.card__content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 40%;
+.card-souvenir{
+    position: relative;
+
+    .card__media{
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .card__content{
+        position: absolute;
+        z-index: 5;
+        bottom: 0;
+        left: 0;
+        padding: 48px 48px;
+        width: 100%;
+    }
 }
