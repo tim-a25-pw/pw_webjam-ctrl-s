@@ -21,6 +21,11 @@
     align-items: center;
     padding-bottom: 65px;
 
+    @media screen and (max-width: 800px){
+        flex-direction: column;
+        gap: 16px;
+    }
+
     .nav-footer{
         color: var(--color-black);
 
@@ -28,9 +33,17 @@
             display: flex;
             gap: 32px;
             list-style: none;
+            padding: 0;
 
             li{
                 text-transform: uppercase;
+            }
+        }
+
+        @media screen and (max-width: 1100px){
+            ul{
+                flex-direction: column;
+                gap: 16px;
             }
         }
     }
@@ -47,6 +60,4 @@
             color: var(--color-mauve);
         }
     }
-
-    
 }
