@@ -106,12 +106,12 @@
         </div>
     </section>
 
-        <?php if ( have_rows('book-people', 'option')): ?>
+        <?php if ( have_rows('book-people')): ?>
     <section class="souvenir">
         <div class="wrapper">
             <h2 class="h2-music">Des noms à se souvenir</h2>
             <div class="grid-3">
-                <?php while(have_rows('book-people', 'option')): the_row(); ?>
+                <?php while(have_rows('book-people')): the_row(); ?>
                 <div class="card-souvenir">
                     <div class="card__media">
                         <?php $image = get_sub_field('book-people-image'); ?>

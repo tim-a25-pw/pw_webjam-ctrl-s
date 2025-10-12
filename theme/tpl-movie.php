@@ -105,12 +105,12 @@
         </div>
     </section>
 
-       <?php if ( have_rows('movie-people', 'option')): ?>
+       <?php if ( have_rows('movie-people')): ?>
     <section class="souvenir">
         <div class="wrapper">
             <h2 class="h2-music">Des noms à se souvenir</h2>
             <div class="grid-3">
-                <?php while(have_rows('movie-people', 'option')): the_row(); ?>
+                <?php while(have_rows('movie-people')): the_row(); ?>
                 <div class="card-souvenir">
                     <div class="card__media">
                         <?php $image = get_sub_field('movie-people-image'); ?>
