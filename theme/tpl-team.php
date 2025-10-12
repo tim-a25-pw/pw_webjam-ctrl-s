@@ -76,7 +76,7 @@
                                 </h3>
                                 <?php if (get_field('member-role')) : ?>
                                     <h4 data-scrolly="fromRight">
-                                        <?php the_field('undertitle_h2'); ?>
+                                        <?php the_field('member-role'); ?>
                                     </h4>
                                 <?php endif; ?>
                                 <div data-scrolly="fromRight">
