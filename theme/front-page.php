@@ -3,81 +3,77 @@
 <section class="hero-accueil">
     <div class="wrapper">
         <div class="hero-media">
-            <img src="<?php bloginfo('template_url') ?>/assets/images/lunettes_hero.png" alt="Lunettes Vision" />
+            <?php the_post_thumbnail(); ?>
         </div>
         <div class="hero-content">
             <div class="hero-title">
-                <h1>La liberté</h1>
+                <h1><?php the_title(); ?></h1>
                 <div class="hero-title-indent">
-                    <h2>À portée de regard</h2>
-                    <p>Connecte-toi à la mémoire collective. Résiste par la vision.</p>
+                        <?php if (get_field('h2_hero')) : ?>
+                            <h2><?php the_field('h2_hero'); ?></h2>
+                        <?php endif; ?>
+
+                    <?php if (get_field('undertitle_h2')) : ?>
+                        <p><?php the_field('undertitle_h2'); ?></p>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="hero-intro">
-                <p>Dans un monde où la culture est effacée, Vision te rend l’accès à ce qu’ils ont voulu cacher.</p>
-                <p>Lis les livres interdits, regarde les films censurés, écoute les musiques bannies — tout à travers une simple paire de lunettes.</p>
+                <?php the_content(); ?>
             </div>
-            <!--<div class="hero-down">
-                <a href="" class="hero-scrolldown">
-                    <p>En savoir plus</p>
-                    <svg class="icon icon--lg">
-                        <use href="#icon-chevron_down"></use>
-                    </svg>
-                </a>
-            </div>-->
         </div>
     </div>
 </section>
 
-<section class="arguments">
-    <div class="wrapper">
-       
-        <div class="argument-content">
-            <h2>Pourquoi vision?</h2>
-            <ul>
-                <li>
-                    Les verres diffusent des
-                    <strong>écrans flottants</strong>
-                    invisibles à l’œil nu.
-                </li>
-                <li>
-                    Connexion à un
-                    <strong>réseau sécurisé</strong>
-                    .
-                </li>
-                <li>
-                    Apparence sobre et minimaliste, il est
-                    <strong>impossible de les distinguer</strong>
-                    des lunettes ordinaires.
-                </li>
-                <li>
-                    Suffisant d’une recharge pour
-                    <strong>72 heures</strong>
-                    de travail.
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
 
-<section class="universe-list">
-    <div class="wrapper">
-        <h2>Découvrez l'interdit</h2>
-        <div class="universe-cards">
-            <a class="universe-card">
-                <img src="<?php bloginfo('template_url') ?>/assets/images/univers-musical.png" alt="" />
-                <h3>Univers musical</h3>
-        </a>
-            <a class="universe-card">
-                <img src="<?php bloginfo('template_url') ?>/assets/images/univers-lecture.png" alt="" />
-                <h3>Univers de lecture</h3>
-            </a>
-            <a  class="universe-card">
-                <img src="<?php bloginfo('template_url') ?>/assets/images/univers-cinema.png" alt="" />
-                <h3>Univers du cinéma</h3>
-            </a>
+<?php if (have_rows('why_vision')) : ?>
+    <section class="arguments">
+        <div class="wrapper">
+        
+            <div class="argument-content">
+                <h2>Pourquoi vision?</h2>
+                <ul>
+                    <?php while(have_rows('why_vision')) : the_row(); ?>
+                        <li>
+                            <?php the_sub_field('item_why_vision'); ?>
+                        </li>
+                    <?php endwhile; ?>
+                </ul>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+<?php endif; ?>
+
+<?php if (have_rows('cards_universe')) : ?>
+    <section class="universe-list">
+        <div class="wrapper">
+            <h2>Découvrez l'interdit</h2>
+
+            <div class="universe-cards">
+                <?php while(have_rows('cards_universe')) : the_row(); ?>
+                
+                    <?php 
+                        $link = get_sub_field('link');
+                        if( $link ): 
+                            $link_url = $link['url'];
+                            $link_title = $link['title'];
+                            $link_target = $link['target'] ? $link['target'] : '_self';
+                    ?>
+                        <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="universe-card">
+                            <?php 
+                                $image = get_sub_field('card_img');
+                                if( !empty( $image ) ): 
+                            ?>
+                                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                            <?php endif; ?>
+        
+                            <h3><?php echo esc_html( $link_title ); ?></h3>
+                        </a>
+                    <?php endif; ?>
+                <?php endwhile; ?>
+            </div>
+        </div>
+    </section>
+<?php endif; ?>
 
 <?php get_footer(); ?>
