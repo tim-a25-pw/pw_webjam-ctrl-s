@@ -1,15 +1,15 @@
-    <?php /* Template Name: Univers Musique */ ?>
+    <?php /* Template Name: Univers Movie */ ?>
 
 <?php get_header(); ?>
 
-    <section class="hero-music">
+    <section class="hero-cinema">
         <div class="wrapper">
             <div class="hero__media">
                 <?php the_post_thumbnail(); ?>
             </div>
             <div class="hero__content">
                 <h1><?php the_title(); ?></h1>
-                <p><?php the_content(); ?></p>
+                <?php the_content(); ?>            
             </div>
         </div>
     </section>
@@ -17,12 +17,12 @@
     <!-- OEUVRE VEDETTE -->
     <?php 
         $featured = array(
-            'post_type'=> 'music',
+            'post_type'=> 'movie',
             'post_status'=> 'publish',
             'posts_per_page'=> -1,
             'meta_query'     => array(
                 array(
-                        'key'     => 'music-featured',
+                        'key'     => 'movie-featured',
                         'value'   => '1',
                         'compare' => '='
                     )
@@ -52,12 +52,12 @@
             <!-- OEUVRE PAS VEDETTE -->
             <?php 
                 $not_featured = array(
-                    'post_type'=> 'music',
+                    'post_type'=> 'movie',
                     'post_status'=> 'publish',
                     'posts_per_page '=> -1,
                     'meta_query'     => array(
                         array(
-                            'key'     => 'music-featured',
+                            'key'     => 'movie-featured',
                             'value'   => '0',
                             'compare' => '='
                         )
@@ -67,7 +67,7 @@
             ?> 
 
             <?php if( $query_not_featured ->have_posts() ) : ?>
-            <div class="cards swiper swiper-musique" data-component="Carousel" data-direction="vertical" data-split data-slides="2" data-space="55">
+            <div class="cards swiper swiper-lecture green" data-component="Carousel" data-split data-direction="vertical" data-slides="2" data-space="55">
                 <div class="custom-pagination"></div>
                 <div class="swiper-wrapper">
                     <?php while( $query_not_featured->have_posts()): $query_not_featured->the_post(); ?>
@@ -85,23 +85,21 @@
             </div>
             <?php endif; ?>
             <?php wp_reset_query(); ?>
-            <a href="<?php bloginfo('url') ?>/soumettre-une-oeuvre" class="btn blue btn-blue">Soumettre une oeuvre</a>
+            <a href="<?php bloginfo('url') ?>/soumettre-une-oeuvre" class="btn green">Soumettre une oeuvre</a>
         </div>
     </section>
 
     <section class="interaction">
         <div class="wrapper">
             <div class="media">
-                <img src="<?php bloginfo('template_url') ?>/assets/images/lunetteInteraction.png" alt="">
+                <img src="<?php bloginfo('template_url') ?>/assets/images/lunetteInteractionCinema.png" alt="">
             </div>
             <div class="content">
                 <h2 class="h2-music">Interaction</h2>
-                <h3>Écouteurs à vibration</h3>
-                <p>La musique prend vie autour de vous grâce à un son binaural immersif transmis par vibration osseuse. Chaque note et chaque voix résonnent avec une clarté saisissante, comme si l’artiste jouait à vos côtés — une expérience libre, pure et sans censure.</p>
+                <p>Les grands classiques du cinéma reprennent vie devant vos yeux. Grâce à un affichage immersif intégré, Vision vous permet de redécouvrir des chefs d’œuvre  comme si l’écran vous enveloppait tout entier, à l’abri de toute censure.</p>
                 <ul>
-                    <li><span>Tapotez la branche</span> pour activer la musique</li>
-                    <li><span>Clignez deux fois</span> pour mettre en pause la lecture</li>
-                    <li><span>Glissez le regard</span> de droite à gauche pour changer de chanson</li>
+                    <li><span class="green">Abaissez les lunettes</span> pour lancer la projection.</li>
+                    <li><span class="green">Faites glisser votre regard de droite à gauche</span> pour changer de scène, et laissez le film se dérouler autour de vous, entre rêve et réalité.</li>
                 </ul>
             </div>
         </div>
@@ -111,28 +109,28 @@
         <div class="wrapper">
             <h2 class="h2-music">Des noms à se souvenir</h2>
             <div class="grid-3">
-                <div class="card-souvenir">
+                <div class="card-souvenir card-souvenir_lecture">
                     <div class="card__media">
-                        <img src="assets/images/elvisCard.png" alt="">
+                        <img src="assets/images/charlieChaplin.png" alt="">
                     </div>
                     <div class="card__content">
-                        <h3>Elvis Presley</h3>
+                        <h3>Charlie Chaplin</h3>
                     </div>
                 </div>
-                <div class="card-souvenir">
+                <div class="card-souvenir card-souvenir_lecture">
                     <div class="card__media">
-                        <img src="assets/images/beatlesCard.png" alt="">
+                        <img src="assets/images/alfredHitchcock.png" alt="">
                     </div>
                     <div class="card__content">
-                        <h3>The Beatles</h3>
+                        <h3>Alfred Hitchcock</h3>
                     </div>
                 </div>
-                <div class="card-souvenir">
+                <div class="card-souvenir card-souvenir_lecture">
                     <div class="card__media">
-                        <img src="assets/images/edithCard.png" alt="">
+                        <img src="assets/images/jeanRenoir.png" alt="">
                     </div>
                     <div class="card__content">
-                        <h3>Édith Piaf</h3>
+                        <h3>Jean Renoir</h3>
                     </div>
                 </div>
             </div>
@@ -161,7 +159,7 @@
                 <h2 class="h2-music">Les meilleurs hits</h2>
                 <div class="grid-3">
                     <?php while( $query_favorites->have_posts()): $query_favorites->the_post(); ?>
-                        <a href="<?php the_permalink(); ?>" class="card-hits">
+                        <a href="<?php the_permalink(); ?>" class="card-hits card-hits_lecture">
                             <div class="card__media">
                                 <?php the_post_thumbnail(); ?>
                             </div>

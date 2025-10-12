@@ -29,8 +29,16 @@
 <?php if (have_rows('why_vision')) : ?>
     <section class="arguments">
         <div class="wrapper">
-        
-            <div class="argument-content">
+            <div class="argument-media" data-scrolly="fromLeft">
+                <?php 
+                $image = get_field('img_why_vision');
+                if( !empty( $image ) ): 
+                ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                <?php endif; ?>
+            </div>
+            
+            <div class="argument-content" data-scrolly="fromRight">
                 <h2>Pourquoi vision?</h2>
                 <ul>
                     <?php while(have_rows('why_vision')) : the_row(); ?>
