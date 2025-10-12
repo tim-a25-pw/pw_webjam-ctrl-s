@@ -1,8 +1,11 @@
 .team{
     padding: var(--spacing-xl) 0;
+
+    padding-top: var(--spacing-xxl);
 }
 
 .hero-team{
+    padding-bottom: var(--spacing-xl);
     .hero-title-container{
         display: flex;
         align-items: center;
@@ -30,14 +33,55 @@
     }
 }
 
+@media screen and (max-width: 1180px){
+    .team-about{
+       display: flex;
+
+       .team-about__media{
+        width: 300%;
+       }
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .team-about{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: var(--spacing-md);
+
+        .team-about__media{
+            width: 100%;
+        }
+
+        .team-about__content{
+            width: 75%;
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+    .team-about{
+        .team-about__content{
+            width: 100%;
+        }
+    }
+}
+
 .teammates{
+    h2{
+        padding-top: var(--spacing-xl);
+        padding-bottom: var(--spacing-lg);
+    }
+
     .card_teammate{
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         align-items: center;
+        gap: var(--spacing-lg);
 
         .card_teammate__content{
-            grid-column: 6 / 9;
+            grid-column: 6 / 11;
         }
 
         .card_teammate__media{
@@ -54,4 +98,33 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xl);
+}
+
+
+@media screen and (max-width: $breakpoint-md) {
+    .cards_teammates{
+        gap: var(--spacing-md);
+    }
+
+    .teammates{
+        .card_teammate{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+
+            .card_teammate__content{
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-sm){
+     .teammates{
+        .card_teammate{
+            .card_teammate__content{
+                width: 100%;
+            }
+        }
+    }
 }
