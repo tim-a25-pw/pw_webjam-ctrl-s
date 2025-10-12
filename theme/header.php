@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vision</title>
-
+    <?php wp_head(); ?>
     <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/styles/main.css" />
 
     <script>
         // À décommenter lorsque rendu dans le fichier .php pour que les icônes fonctionnent dans WP
-        // iconsPath = '<?php bloginfo('template_url') ?>/dist/';
+         iconsPath = '<?php bloginfo('template_url') ?>/';
     </script>
 
     <script src="scripts/vendors.js" defer></script>

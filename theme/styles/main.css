@@ -398,6 +398,7 @@ body {
   font-size: var(--font-size-content);
   color: var(--color-white);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* ==========================================================================
@@ -1800,19 +1801,22 @@ a:hover {
 .hero-accueil {
   position: relative;
   height: 87vh;
+  background-image: url(../assets/images/hero__bg.png);
+  background-size: cover;
+  background-position: center;
 }
 .hero-accueil .wrapper {
   height: 100%;
 }
 .hero-accueil .hero-media {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 120px;
+  left: -120px;
   z-index: 1;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 100%;
-  width: 100%;
+  height: 120%;
+  width: 120%;
 }
 .hero-accueil .hero-media img {
   display: block;
@@ -1822,12 +1826,13 @@ a:hover {
      object-fit: cover;
 }
 .hero-accueil .hero-content {
+  padding-top: 240px;
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  gap: 32px;
+  justify-content: center;
+  gap: 80px;
   position: relative;
   z-index: 5;
   color: var(--color-black);
@@ -1839,7 +1844,7 @@ a:hover {
   max-width: 28vw;
 }
 .hero-accueil .hero-content .hero-intro p {
-  margin: 18px 0;
+  margin: 24px 0;
 }
 .hero-accueil .hero-content h2 {
   font-family: var(--font-secondary);
@@ -1847,13 +1852,15 @@ a:hover {
 .hero-accueil .hero-content p {
   margin: 0;
 }
-.hero-accueil .hero-content .hero-down {
-  align-self: center;
-}
-.hero-accueil .hero-content .hero-down .hero-scrolldown {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.hero-accueil .hero-content {
+  /*.hero-down {
+      align-self: center;
+      .hero-scrolldown {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+  }*/
 }
 
 .hero-music {
@@ -2145,28 +2152,43 @@ a:hover {
   height: 100%;
 }
 
+.arguments {
+  position: relative;
+}
 .arguments .wrapper {
+  padding: 80px 0;
+}
+.arguments .wrapper .argument-content {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 24px;
   justify-content: center;
-  margin-bottom: 150px;
-  margin-top: 120px;
+}
+.arguments .wrapper h2 {
+  font-family: var(--font-secondary);
 }
 .arguments .wrapper ul {
-  max-width: 30vw;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
+.universe-list {
+  background-color: var(--color-white);
+  padding: 80px 0;
+}
 .universe-list h2 {
   font-family: var(--font-secondary);
+  color: var(--color-black);
+  padding-bottom: 24px;
 }
 .universe-list .universe-cards {
   display: flex;
-  gap: 25px;
-  margin: 60px 0 200px;
+  gap: 24px;
 }
 .universe-list .universe-cards .universe-card {
-  background-color: var(--color-white);
-  color: var(--color-black);
+  background-color: var(--color-black);
+  color: var(--color-white);
   padding: 30px 30px 20px 30px;
 }
 
