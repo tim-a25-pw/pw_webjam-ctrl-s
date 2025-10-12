@@ -5,7 +5,9 @@
     background-image: url(../assets/images/hero__bg.png);
      background-size: cover;
   background-position: center;
-   // background-color: var(--color-white);
+   @media screen and (max-width: $breakpoint-sm) {
+            height: 100%;
+        }
 
     .wrapper {
         height: 100%;
@@ -14,22 +16,46 @@
     .hero-media {
         position: absolute;
         top: 120px;
-        left: -120px;
+        right: 0;
         z-index: 1;
-        object-fit: cover;
-        height: 120%;
-        width: 120%;
+                        
+        @media screen and (max-width: $breakpoint-lg) {
+            height: 720px;
+            width: 720px;
+            right: 0;
+        }
+
+        @media screen and (max-width: 1260px) {
+             height: 600px;
+            width: 600px;
+            right: 0;
+        }
+
+        @media screen and (max-width: $breakpoint-md) {
+            height: 600px;
+            width: 600px;
+            right: 0;
+            top: 0;
+        }
+        @media screen and (max-width: 950px) {
+            height: 600px;
+            width: 600px;
+            left: 0;
+            top: 0;
+        }
+        @media screen and (max-width: 500px) {
+            height: 400px;
+            width: 400px;
+        }
+        
         img {
             display: block;
             height: 100%;
             width: 100%;
-            object-fit: cover;
+            //object-fit: cover;
         }
 
-        @media screen and (min-width: $breakpoint-lg) {
-        height: 100%;
-        width: 100%;
-    }
+        
     }
 
     .hero-content {
@@ -43,25 +69,58 @@
         position: relative;
         z-index: 5;
         color: var(--color-black);
+        @media screen and (max-width: 1260px) {
+                    gap: 24px;
+                    padding-top: 80px;
+                }
+         @media screen and (max-width: 950px) {
+            justify-content: end;
+        }
+        @media screen and (max-width: $breakpoint-sm) {
+            padding-top: 500px;
+        }
+        @media screen and (max-width: 500px) {
+            padding-top: 360px;
+        }
 
         .hero-title {
             .hero-title-indent {
                 padding-left: 150px;
+                @media screen and (max-width: 500px) {
+            padding-left: 40px;
+        }
             }
         }
         .hero-intro {
            
             
             max-width: 28vw;
+            @media screen and (max-width: 1260px) {
+                    font-size: 16px;
+                    max-width: 60%;
+                }
             p {
                 margin: 24px 0;
+                
             }
         }
         h2 {
             font-family: var(--font-secondary);
+             @media screen and (max-width: 1260px) {
+                    font-size: 40px;
+                    
+                }
+        }
+
+        h1{
+            @media screen and (max-width: 1260px) {
+                    font-size: 72px;
+                    
+                }
         }
         p {
             margin: 0;
+            
         }
         /*.hero-down {
             align-self: center;
@@ -98,8 +157,12 @@
         }
 
         p {
-            width: 30%;
+            max-width: 30%;
             margin: 0;
+            @media screen and (max-width: 1260px) {
+                    font-size: 16px;
+                    max-width: 100%;
+                }
         }
     }
 }
