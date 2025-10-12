@@ -2022,8 +2022,8 @@ a:hover {
   gap: 48px;
 }
 .hero-lecture .hero__media {
-  height: 100%;
-  width: 80%;
+  height: 60%;
+  width: 40%;
 }
 .hero-lecture .hero__media img {
   height: 100%;
@@ -2321,6 +2321,9 @@ a:hover {
   height: 100%;
   gap: 64px;
 }
+.cards .card .card__content {
+  transition: all 0.5s ease-out;
+}
 @media screen and (max-width: 768px) {
   .cards .card {
     align-items: start;
@@ -2337,6 +2340,9 @@ a:hover {
   .cards .card p {
     font-size: 16px;
   }
+}
+.cards .card:hover .card__content {
+  transform: translateX(40px);
 }
 .cards .card__media {
   aspect-ratio: 2/1.4;
@@ -2433,6 +2439,12 @@ a:hover {
 }
 .card-hits h3 {
   width: 70%;
+}
+.card-hits .card__content {
+  transition: all 0.5s ease-out;
+}
+.card-hits:hover .card__content {
+  transform: translateY(20px);
 }
 
 .card-hits_lecture .card__media {
