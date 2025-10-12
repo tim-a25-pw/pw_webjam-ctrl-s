@@ -426,10 +426,10 @@ h2 {
   font-family: var(--font-secondary);
   font-size: var(--font-size-h2);
   font-weight: 400;
-  text-transform: uppercase;
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: var(--font-size-h3);
   font-weight: 400;
 }
@@ -467,7 +467,8 @@ a {
   font-weight: 500;
   transition: all 0.3s ease-in;
 }
-a:hover {
+
+.hover:hover {
   color: var(--color-mauve);
 }
 
@@ -1448,7 +1449,7 @@ a:hover {
   color: var(--color-mauve);
 }
 .header__brand .icon__brand {
-  width: 12.5em;
+  width: 8.5em;
   height: 4.4em;
 }
 
@@ -1841,7 +1842,7 @@ a:hover {
 }
 @media screen and (max-width: 768px) {
   .hero-accueil {
-    height: 40vh;
+    height: 30%;
   }
 }
 .hero-accueil .wrapper {
@@ -1881,6 +1882,11 @@ a:hover {
     width: 600px;
     left: 0;
     top: 0;
+  }
+}
+@media screen and (max-width: 615px) {
+  .hero-accueil .hero-media {
+    transform: scale(0.8);
   }
 }
 @media screen and (max-width: 500px) {
@@ -2420,7 +2426,7 @@ a:hover {
   z-index: 5;
   bottom: 0;
   left: 0;
-  padding: 48px 48px;
+  padding: 48px 72px !important;
   width: 100%;
 }
 
@@ -2720,6 +2726,11 @@ a:hover {
   display: flex;
   align-items: center;
   height: 60%;
+}
+.hero-team .hero-media img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
 }
 
 .team-about {

@@ -107,7 +107,7 @@
         </div>
     </section>
 
-    <?php if ( have_rows('movie-people')): ?>
+    <?php if ( have_rows('music-people')): ?>
     <section class="souvenir">
         <div class="wrapper">
             <h2 class="h2-music" data-scrolly="fromLeft">Des noms à se souvenir</h2>

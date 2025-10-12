@@ -59,7 +59,7 @@
 
 <section class="realisateur">
     <div class="wrapper">
-        <h2 data-scrolly="fromLeft">Sur le réalisateur</h2>
+        <h2 data-scrolly="fromLeft">Sur l'auteur</h2>
         <?php if (get_field('book-author-text')) : ?>
             <p><?php the_field('book-author-text'); ?></p>
         <?php endif; ?>    

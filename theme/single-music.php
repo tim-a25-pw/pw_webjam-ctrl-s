@@ -60,7 +60,7 @@
 
 <section class="realisateur">
     <div class="wrapper">
-        <h2 data-scrolly="fromLeft">Sur le réalisateur</h2>
+        <h2 data-scrolly="fromLeft">Sur le chanteur</h2>
         <?php if (get_field('music-artist-text')) : ?>
             <p><?php the_field('music-artist-text'); ?></p>
         <?php endif; ?>    
