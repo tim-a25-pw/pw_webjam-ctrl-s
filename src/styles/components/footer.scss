@@ -7,6 +7,12 @@
         margin: 0;
         text-align: center;
     }
+
+    hr{
+        margin-bottom: 48px;
+        background-color: var(--color-black);
+        height: 1px;
+    }
 }
 
 .footer__content {

@@ -1,7 +1,8 @@
 .hero-accueil {
     position: relative;
     height: 87vh;
-    background-image: url(../../assets/images/hero__bg.png);
+    background-color: var(--color-white);
+    background-image: url(../assets/images/hero__bg.png);
      background-size: cover;
   background-position: center;
    // background-color: var(--color-white);
@@ -24,6 +25,11 @@
             width: 100%;
             object-fit: cover;
         }
+
+        @media screen and (min-width: $breakpoint-lg) {
+        height: 100%;
+        width: 100%;
+    }
     }
 
     .hero-content {
