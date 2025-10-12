@@ -5,9 +5,9 @@
     background-image: url(../assets/images/hero__bg.png);
      background-size: cover;
     background-position: center;
-   @media screen and (max-width: $breakpoint-sm) {
-            height: 40vh;
-        }
+    @media screen and (max-width: $breakpoint-sm) {
+        height: 30%;
+    }
 
     .wrapper {
         height: 100%;
@@ -43,6 +43,11 @@
             left: 0;
             top: 0;
         }
+
+        @media screen and (max-width: 615px) {
+            transform: scale(0.8);
+        }
+
         @media screen and (max-width: 500px) {
             height: 400px;
             width: 400px;
