@@ -34,10 +34,31 @@
         font-family: var(--font-secondary);
         color: var(--color-black);
         padding-bottom: 24px;
+
+        
     }
     .universe-cards {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
+        
+        @media screen and (max-width: $breakpoint-sm) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media screen and (max-width: 500px) {
+            grid-template-columns: 1fr;
+        }
+
+        h3{
+           @media screen and (max-width: $breakpoint-lg) {
+            font-size: 32px;
+        } 
+
+         @media screen and (max-width: 950px) {
+            font-size: 24px;
+        }
+        
+        }
        
         .universe-card {
             background-color: var(--color-black);
