@@ -21,29 +21,16 @@
     align-items: center;
     padding-bottom: 65px;
 
-    .nav-primary__item {
-        @media screen and (min-width: $breakpoint-md) {
-            color: var(--color-black);
-            position: relative;
+    .nav-footer{
+        color: var(--color-black);
 
-            &::before {
-                display: block;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                height: 2px;
-                width: 100%;
-                content: '';
-                background-color: black;
-                transform: scaleX(0);
-                transition: 0.3s all;
-            }
+        ul{
+            display: flex;
+            gap: 32px;
+            list-style: none;
 
-            &:hover {
-                text-decoration: none;
-                &::before {
-                    transform: scaleX(1);
-                }
+            li{
+                text-transform: uppercase;
             }
         }
     }
@@ -54,5 +41,12 @@
         width: 12.5em;
         height: 4.4em;
         color: var(--color-black);
+        transition: all 0.3s ease-in;
+        
+        &:hover{
+            color: var(--color-mauve);
+        }
     }
+
+    
 }
