@@ -16,7 +16,7 @@
             )); ?>
             </div>
             <div class="button">
-                <a href="" class="btn btn_footer">Soumettre une oeuvre</a>
+                <a href="<?php bloginfo('url'); ?>/soumettre-une-oeuvre" class="btn btn_footer">Soumettre une oeuvre</a>
             </div>
         </div>
         <p>Tous droits réservés © <?php echo Date('Y'); ?> <?php bloginfo('name'); ?> Tous droits réservés.</p>

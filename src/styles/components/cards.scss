@@ -6,6 +6,10 @@
         height: 100%;
         gap: 64px;
 
+        .card__content{
+            transition: all 0.5s ease-out;
+        }
+
         @media screen and (max-width: $breakpoint-sm) {
                align-items: start;
                 flex-direction: column;
@@ -21,6 +25,12 @@
             @media screen and (max-width: $breakpoint-sm) {
             font-size: 16px;
         }
+        }
+
+        &:hover{
+            .card__content{
+                transform: translateX(40px);
+            }
         }
     }
 
@@ -141,6 +151,16 @@
         width: 70%;
         
     }
+
+    .card__content{
+        transition: all 0.5s ease-out;
+    }
+
+    &:hover{
+        .card__content{
+            transform: translateY(20px);
+        }
+    }
 }
 
 .card-hits_lecture{
@@ -158,5 +178,18 @@
 
     h3{
         width: 90%;
+    }
+}
+
+.universe-cards{
+    .universe-card{
+        h3{
+            transition: all 0.3s ease-out;
+        }
+        
+        &:hover{
+            background-color: var(--color-mauve) !important;
+            box-shadow: 10px 10px var(--color-black);
+        }
     }
 }

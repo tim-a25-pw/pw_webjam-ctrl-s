@@ -1,8 +1,8 @@
-    <?php /* Template Name: Univers Movie */ ?>
+    <?php /* Template Name: Univers Book */ ?>
 
 <?php get_header(); ?>
 
-    <section class="hero-cinema">
+    <section class="hero-lecture">
         <div class="wrapper">
             <div class="hero__media">
                 <?php the_post_thumbnail(); ?>
@@ -17,12 +17,12 @@
     <!-- OEUVRE VEDETTE -->
     <?php 
         $featured = array(
-            'post_type'=> 'movie',
+            'post_type'=> 'book',
             'post_status'=> 'publish',
             'posts_per_page'=> -1,
             'meta_query'     => array(
                 array(
-                        'key'     => 'movie-featured',
+                        'key'     => 'book-featured',
                         'value'   => '1',
                         'compare' => '='
                     )
@@ -52,12 +52,12 @@
             <!-- OEUVRE PAS VEDETTE -->
             <?php 
                 $not_featured = array(
-                    'post_type'=> 'movie',
+                    'post_type'=> 'book',
                     'post_status'=> 'publish',
                     'posts_per_page '=> -1,
                     'meta_query'     => array(
                         array(
-                            'key'     => 'movie-featured',
+                            'key'     => 'book-featured',
                             'value'   => '0',
                             'compare' => '='
                         )
@@ -67,7 +67,7 @@
             ?> 
 
             <?php if( $query_not_featured ->have_posts() ) : ?>
-            <div class="cards swiper swiper-lecture green" data-component="Carousel" data-split data-direction="vertical" data-slides="2" data-space="55">
+            <div class="cards swiper swiper-lecture orange" data-component="Carousel" data-direction="vertical" data-slides="2" data-space="55">
                 <div class="custom-pagination"></div>
                 <div class="swiper-wrapper">
                     <?php while( $query_not_featured->have_posts()): $query_not_featured->the_post(); ?>
@@ -85,39 +85,40 @@
             </div>
             <?php endif; ?>
             <?php wp_reset_query(); ?>
-            <a href="<?php bloginfo('url') ?>/soumettre-une-oeuvre" class="btn green">Soumettre une oeuvre</a>
+            <a href="<?php bloginfo('url') ?>/soumettre-une-oeuvre" class="btn orange">Soumettre une oeuvre</a>
         </div>
     </section>
 
     <section class="interaction">
         <div class="wrapper">
             <div class="media">
-                <img src="<?php bloginfo('template_url') ?>/assets/images/lunetteInteractionCinema.png" alt="">
+                <img src="<?php bloginfo('template_url') ?>/assets/images/lunetteInteractionLecture.png" alt="">
             </div>
             <div class="content">
                 <h2 class="h2-music">Interaction</h2>
-                <p>Les grands classiques du cinéma reprennent vie devant vos yeux. Grâce à un affichage immersif intégré, Vision vous permet de redécouvrir des chefs d’œuvre  comme si l’écran vous enveloppait tout entier, à l’abri de toute censure.</p>
+                <h3>Suivi du regard</h3>
+                <p>Les grands classiques reprennent vie sous vos yeux. Grâce à un affichage immersif intégré, Vision vous permet de lire des œuvres entières — de Victor Hugo à George Orwell — comme si les mots flottaient devant vous, à l’abri de toute censure.</p>
                 <ul>
-                    <li><span class="green">Abaissez les lunettes</span> pour lancer la projection.</li>
-                    <li><span class="green">Faites glisser votre regard de droite à gauche</span> pour changer de scène, et laissez le film se dérouler autour de vous, entre rêve et réalité.</li>
+                    <li><span class="orange">Baissez les lunettes</span> pour activer la lecture</li>
+                    <li><span class="orange">Glissez le regard</span> de droite à gauche pour changer de page</li>
                 </ul>
             </div>
         </div>
     </section>
 
-       <?php if ( have_rows('movie-people')): ?>
+        <?php if ( have_rows('book-people')): ?>
     <section class="souvenir">
         <div class="wrapper">
             <h2 class="h2-music">Des noms à se souvenir</h2>
             <div class="grid-3">
-                <?php while(have_rows('movie-people')): the_row(); ?>
+                <?php while(have_rows('book-people')): the_row(); ?>
                 <div class="card-souvenir">
                     <div class="card__media">
-                        <?php $image = get_sub_field('movie-people-image'); ?>
+                        <?php $image = get_sub_field('book-people-image'); ?>
                         <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                     </div>
                     <div class="card__content">
-                        <h3><?php the_sub_field('movie-people-name'); ?></h3>
+                        <h3><?php the_sub_field('book-people-name'); ?></h3>
                     </div>
                 </div>
                <?php endwhile ?>
@@ -128,12 +129,12 @@
 
     <?php 
         $favorites = array(
-            'post_type'=> 'movie',
+            'post_type'=> 'book',
             'post_status'=> 'publish',
             'posts_per_page '=> -1,
             'meta_query'     => array(
                 array(
-                    'key'     => 'movie-favorite',
+                    'key'     => 'book-favorite',
                     'value'   => '1',
                     'compare' => '='
                 )
