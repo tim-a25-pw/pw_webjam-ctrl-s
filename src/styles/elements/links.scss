@@ -8,8 +8,9 @@ a {
     text-decoration: none;
     font-size: typo(18px);
     font-weight: 500;
+    transition: all 0.3s ease-in;
 
     &:hover {
-        color: var(--color-blue);
+        color: var(--color-mauve);
     }
 }

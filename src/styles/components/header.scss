@@ -11,6 +11,8 @@
     z-index: 10;
     transition: transform .4s $ease-out-expo;
 
+    border-bottom: 1px solid rgba($color: #FEFEFE, $alpha: 0.75);
+
     .wrapper{
         align-items: center;
         display: flex;
@@ -29,9 +31,6 @@
         z-index: 2;
     }
 
-    @media screen and (min-width: $breakpoint-lg) {
-        padding: 0 var(--spacing-lg);
-    }
     .header-is-hidden.is-scrolling-down:not(.nav-is-active) &{
         transform: translateY(-100%) translateY(4px);
     }
@@ -41,6 +40,11 @@
     max-width: 200px;
     position: relative;
     z-index: 10;
+    transition: all 0.3s ease-in;
+
+    &:hover{
+        color: var(--color-mauve);
+    }
 
     .icon__brand{
         width: 12.5em;
