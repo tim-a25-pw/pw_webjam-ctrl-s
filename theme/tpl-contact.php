@@ -16,7 +16,7 @@
         </div>
 
         <div class="form__media">
-            <img src="assets/images/hero_form.png" alt="Lunettes Vision" data-scrolly="fromRight" />
+            <img src="<?php bloginfo('template_url'); ?>/assets/images/hero_form.png" alt="Lunettes Vision" data-scrolly="fromRight" />
         </div>
 
         <div class="form__content"><?php the_content(); ?></div>
