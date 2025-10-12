@@ -160,3 +160,16 @@
         width: 90%;
     }
 }
+
+.universe-cards{
+    .universe-card{
+        h3{
+            transition: all 0.3s ease-out;
+        }
+        
+        &:hover{
+            background-color: var(--color-mauve) !important;
+            box-shadow: 10px 10px var(--color-black);
+        }
+    }
+}

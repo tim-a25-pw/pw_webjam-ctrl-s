@@ -1,6 +1,8 @@
 .hero-form{
     padding: var(--spacing-lg) 0;
 
+    background-color: var(--color-white);
+
     .wrapper{
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -9,6 +11,7 @@
     }
 
     .form__content{
+        color: var(--color-black);
         grid-column: 1 / 8;
         grid-row: 1 / 1;
 

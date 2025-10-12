@@ -2451,6 +2451,14 @@ a:hover {
   width: 90%;
 }
 
+.universe-cards .universe-card h3 {
+  transition: all 0.3s ease-out;
+}
+.universe-cards .universe-card:hover {
+  background-color: var(--color-mauve) !important;
+  box-shadow: 10px 10px var(--color-black);
+}
+
 .interaction {
   position: relative;
   padding: 120px 0;
@@ -2937,6 +2945,7 @@ a:hover {
 
 .hero-form {
   padding: var(--spacing-lg) 0;
+  background-color: var(--color-white);
 }
 .hero-form .wrapper {
   display: grid;
@@ -2945,6 +2954,7 @@ a:hover {
   gap: var(--spacing-md);
 }
 .hero-form .form__content {
+  color: var(--color-black);
   grid-column: 1/8;
   grid-row: 1/1;
 }
