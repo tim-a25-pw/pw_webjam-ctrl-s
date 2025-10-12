@@ -4,6 +4,12 @@
 .video_teammate{
     width: 50%;
     align-self: end;
+
+    @media screen and (max-width: $breakpoint-md) {
+        align-self: center;
+        width: 100%;
+        margin-bottom: var(--spacing-xl);
+    }
 }
 
 .video {

@@ -1,8 +1,28 @@
-        <footer>
-            <h2><?php bloginfo('name'); ?></h2>
-            <p>Tous droits réservés © <?php echo Date('Y'); ?> <?php bloginfo('name'); ?></p>
-        </footer>
+<footer class="footer">
+    <div class="wrapper">
+        <div class="footer__content">
+            <div class="footer__logo">
+                <svg class="icon icon__brand">
+                    <use href="#icon-logo"></use>
+                </svg>
+            </div>
+            <div class="footer__nav">
+                <nav class="nav-primary">
+                    <ul>
+                        <li><a href="" class="nav-primary__item">Cinéma</a></li>
+                        <li><a href="music.html" class="nav-primary__item">Musique</a></li>
+                        <li><a href="" class="nav-primary__item">Lecture</a></li>
+                        <li><a href="" class="nav-primary__item">Équipe</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="button">
+                <a href="" class="btn btn_footer">Soumettre une oeuvre</a>
+            </div>
+        </div>
+        <p>Tous droits réservés © <?php echo Date('Y'); ?> <?php bloginfo('name'); ?> Tous droits réservés.</p>
+    </div>
+</footer>    
     <?php wp_footer(); ?>
-</body>
-
+    </body>
 </html>

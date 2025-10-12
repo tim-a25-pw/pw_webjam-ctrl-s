@@ -55,7 +55,10 @@
             //object-fit: cover;
         }
 
-        
+        @media screen and (min-width: $breakpoint-lg) {
+            height: 100%;
+            width: 100%;
+        }
     }
 
     .hero-content {
@@ -92,8 +95,6 @@
             }
         }
         .hero-intro {
-           
-            
             max-width: 28vw;
             @media screen and (max-width: 1260px) {
                     font-size: 16px;
@@ -167,19 +168,19 @@
     }
 }
 
-.hero-lecture{
+.hero-lecture {
     height: 80vh;
 
-    .wrapper{
+    .wrapper {
         display: flex;
         gap: 48px;
     }
 
-    .hero__media{
+    .hero__media {
         height: 100%;
         width: 80%;
 
-        img{
+        img {
             height: 100%;
             width: 100%;
         }
@@ -194,14 +195,14 @@
             margin-bottom: 48px;
         }
 
-        p{
+        p {
             margin: 0;
             width: 50%;
         }
     }
 }
 
-.hero-cinema{
+.hero-cinema {
     height: 85vh;
 
     .hero__media {

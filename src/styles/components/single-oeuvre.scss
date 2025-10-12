@@ -1,0 +1,141 @@
+.hero_oeuvre{
+    padding: 100px 0 100px;
+    overflow-y: hidden;
+
+    h1{
+        margin: 20px 0;
+        font-family: "MuseoModerno", sans-serif;
+        font-size: typo(152px);
+        font-weight: normal;
+    }
+
+    h2{
+        font-size: typo(112px);
+        font-family: "MuseoModerno", sans-serif;
+    }
+}
+
+.hero_oeuvre img {
+    position: absolute;
+    top:29%;
+    left:30%;
+    z-index: -1;
+}
+
+.about-oeuvre{
+    padding:80px 0;
+    background-color: var(--color-white);
+}
+
+.oeuvre_texte{
+    display:grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 263px;
+    color: var(--color-black);
+}
+
+.oeuvre_content{
+    h2{
+        font-size: typo(112px);
+        font-family: "MuseoModerno", sans-serif;
+    }
+
+    p{
+        margin-top: 24px;
+    }
+}
+
+.extraits{
+    padding: 80px 0; 
+    overflow: hidden;
+    img{
+        position: absolute;
+        top:140%;
+        left:50%;
+        z-index: -1;
+    }
+
+    h2{
+        font-size: typo(112px);
+        font-family: "MuseoModerno", sans-serif;
+        margin-bottom: 24px;
+    }
+}
+
+.all_extraits{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:45px;
+}
+
+.extrait{
+    p{
+        font-size: typo(25px);
+        margin: 0;
+    }
+
+    li{
+        font-size: typo(25px);
+    }
+}
+
+.extraits__content{
+    display:flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.type{
+    background-color: var(--color-white);
+    padding: 80px 0;
+
+    h2{
+        font-size: typo(112px);
+        font-family: "MuseoModerno", sans-serif;
+        color: var(--color-black);
+    }
+}
+
+.type__content{
+    color: var(--color-black);
+}
+
+.types{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 150px;
+    font-size: typo(25px);
+
+    span{
+        font-weight: bold;
+    }
+}
+
+.realisateur{
+    padding: 80px 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    h2{
+        font-size: typo(112px);
+        font-family: "MuseoModerno", sans-serif;
+        margin-bottom: 32px;
+    }
+
+    p{
+        font-size: typo(25px);
+        line-height: 187%;
+    }
+}
+
+.nav_fleche{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.suivante_precedente{
+    padding: 43px 0 97px;
+}
