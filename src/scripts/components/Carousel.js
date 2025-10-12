@@ -30,8 +30,11 @@ export default class Carousel {
   setOptions() {
     if ('split' in this.element.dataset) {
       this.options.breakpoints = {
-        768: {
-          slidesPerView: 2.5,
+        300: {
+          slidesPerView: 1,
+        },
+        1170: {
+          slidesPerView: 2,
         },
       };
     }

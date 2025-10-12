@@ -1,6 +1,48 @@
 .souvenir{
+    padding: 120px 0;
+    background-color: var(--color-white);
     h2{
         margin-bottom: 48px;
+        color: var(--color-black);
+
+        
+        @media screen and (max-width: $breakpoint-lg) {
+            font-size: 72px;
+        } 
+        
+@media screen and (max-width: 550px) {
+            font-size: 48px;
+        } 
+
+        @media screen and (max-width: 390px) {
+            font-size: 42px;
+        } 
+    
+    }
+    .card__content{
+        padding:0 0 24px 72px;
+
+        @media screen and (max-width: $breakpoint-lg) {
+            padding:0 0 22px 48px;
+        } 
+        @media screen and (max-width: 620px) {
+            padding:0 0 22px 64px;
+        } 
+
+        h3{
+            @media screen and (max-width: $breakpoint-lg) {
+            font-size: 24px;
+        } 
+@media screen and (max-width:620px ) {
+       font-size: 48px;
+        }
+        @media screen and (max-width: $breakpoint-xs) {
+            font-size: 24px;
+        } 
+
+        }
+
+        
     }
 }
 
@@ -9,4 +51,13 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
     height: 100%;
+    @media screen and (max-width: $breakpoint-md) {
+       grid-template-columns: 1fr 1fr ;
+        }
+        @media screen and (max-width:620px ) {
+       grid-template-columns: 1fr ;
+        }
+
+        
+    
 }

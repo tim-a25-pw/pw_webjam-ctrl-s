@@ -1,6 +1,31 @@
 .hits{
-    padding: 180px 0;
+    padding: 120px 0;
     h2{
         margin-bottom: 48px;
+        
+
+        
+        @media screen and (max-width: $breakpoint-lg) {
+            font-size: 72px;
+        } 
+        
+        @media screen and (max-width: 550px) {
+            font-size: 48px;
+        } 
+
+        @media screen and (max-width: 390px) {
+            font-size: 42px;
+        } 
+}
+
+h3{
+        @media screen and (max-width: $breakpoint-sm) {
+            font-size: 32px;
+        } 
+        @media screen and (max-width: 580px) {
+            font-size: 24px;
+        } 
+
     }
+    
 }

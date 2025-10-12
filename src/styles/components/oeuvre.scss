@@ -1,7 +1,28 @@
 .oeuvres{
+    background-color: var(--color-white);
+    color: var(--color-black);
+    padding: 120px 0;
     .btn{
-        margin-top: 50px;
+        margin: 80px 0 0 80px;
         display: inline-block;
+        border-color: var(--color-black);
+         @media screen and (max-width: $breakpoint-sm) {
+            margin: 42px 0 0 80px;
+        }
+
+        @media screen and (max-width: 420px) {
+            margin: 42px 0 0 0;
+        } 
+    }
+
+    h2{
+        @media screen and (max-width: $breakpoint-lg) {
+            font-size: 72px;
+        } 
+        
+@media screen and (max-width: 420px) {
+            font-size: 48px;
+        } 
     }
 }
 
@@ -10,8 +31,69 @@
     justify-content: end;
     align-items: center;
     gap: 50px;
+@media screen and (max-width: $breakpoint-sm) {
+            height: 300px;
+            margin: 48px 0;
+        } 
+
+        @media screen and (max-width: 580px) {
+            flex-direction: column-reverse;
+            justify-content: start;
+            align-items: start;
+            height: 520px;
+            margin-bottom: 72px;
+        } 
+
+        @media screen and (max-width: 440px) {
+            height: 540px;
+            margin-bottom: 72px;
+        } 
+    
+
+    h3{
+        @media screen and (max-width: $breakpoint-sm) {
+            font-size: 32px;
+        } 
+        @media screen and (max-width: 580px) {
+            font-size: 24px;
+        } 
+
+    }
+
+    .media{
+       @media screen and (max-width: $breakpoint-lg) {
+            height: 400px;
+            width: 300px;
+            margin: 80px 0;
+        } 
+
+        @media screen and (max-width: $breakpoint-sm) {
+            height: 100%;
+            margin: 48px 0;
+        } 
+        @media screen and (max-width: 580px) {
+            margin: 0;
+        } 
+
+        img{
+            @media screen and (max-width: 580px) {
+            height: 280px;
+            
+        } 
+        @media screen and (max-width: 420px) {
+            height: 200px;
+        } 
+        }
+
+        
+        
+    }
+    
 
     .content{
         width: 40%;
+        @media screen and (max-width: $breakpoint-md) {
+            width: 100%;
+        } 
     }
 }
