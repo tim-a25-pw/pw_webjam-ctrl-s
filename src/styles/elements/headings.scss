@@ -21,8 +21,10 @@ h1 {
 }
 
 h2 {
+    font-family: var(--font-secondary);
     font-size: var(--font-size-h2);
     font-weight: 400;
+    text-transform: uppercase;
 }
 
 h3 {

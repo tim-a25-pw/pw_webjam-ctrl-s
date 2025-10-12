@@ -1,0 +1,57 @@
+.team{
+    padding: var(--spacing-xl) 0;
+}
+
+.hero-team{
+    .hero-title-container{
+        display: flex;
+        align-items: center;
+        height: 60%;
+    }
+}
+
+.team-about{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--spacing-xl);
+    align-items: center;
+
+    .team-about__content{
+        grid-column: 1 / 6;
+    }
+
+    .team-about__media{
+       grid-column: 7 / 13; 
+
+       img{
+            display: block;
+            object-fit: cover;
+       }
+    }
+}
+
+.teammates{
+    .card_teammate{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        align-items: center;
+
+        .card_teammate__content{
+            grid-column: 6 / 9;
+        }
+
+        .card_teammate__media{
+            grid-column: 1 / 6;
+            img{
+                display: block;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.cards_teammates{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
