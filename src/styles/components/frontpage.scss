@@ -1,14 +1,16 @@
 .arguments {
     position: relative;
     .wrapper {
-        
-        padding: 80px 0;
+        display: flex;
+        gap: var(--spacing-lg);
+        padding-top: 80px;
 
         .argument-content{
             display: flex;
             flex-direction: column;
             gap: 24px;
             justify-content: center;
+            padding-bottom: 60px;
         }
 
         h2{
@@ -21,9 +23,24 @@
             gap: 16px;
             
         }
-
         
-    
+        .argument-media{
+            img{
+                margin-left: -80px;
+            }
+            
+        }
+
+        @media screen and (max-width: 980px) {
+            flex-direction: column;
+
+            padding-bottom: 80px;
+
+            .argument-media{
+                display: flex;
+                justify-content: center;
+            }
+        }
     }
 }
 
