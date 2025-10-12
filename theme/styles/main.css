@@ -2426,7 +2426,7 @@ a {
   z-index: 5;
   bottom: 0;
   left: 0;
-  padding: 48px 48px;
+  padding: 48px 72px !important;
   width: 100%;
 }
 
