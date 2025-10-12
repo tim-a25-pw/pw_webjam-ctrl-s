@@ -8,7 +8,7 @@
                 <?php the_post_thumbnail(); ?>
             </div>
             <div class="hero__content">
-                <h1><?php the_title(); ?></h1>
+                <h1 data-scrolly="fromLeft"><?php the_title(); ?></h1>
                 <p><?php the_content(); ?></p>
             </div>
         </div>
@@ -33,7 +33,7 @@
 
     <section class="oeuvres">
         <div class="wrapper">
-            <h2 class="h2-music">Oeuvres</h2>
+            <h2 class="h2-music" data-scrolly="fromLeft">Oeuvres</h2>
             <?php if( $query_featured ->have_posts() ) : ?>
                 <?php while( $query_featured->have_posts()): $query_featured->the_post(); ?>
                     <div class="vedette">
@@ -95,7 +95,7 @@
                 <img src="<?php bloginfo('template_url') ?>/assets/images/lunetteInteraction.png" alt="">
             </div>
             <div class="content">
-                <h2 class="h2-music">Interaction</h2>
+                <h2 class="h2-music" data-scrolly="fromLeft">Interaction</h2>
                 <h3>Écouteurs à vibration</h3>
                 <p>La musique prend vie autour de vous grâce à un son binaural immersif transmis par vibration osseuse. Chaque note et chaque voix résonnent avec une clarté saisissante, comme si l’artiste jouait à vos côtés — une expérience libre, pure et sans censure.</p>
                 <ul>
@@ -110,7 +110,7 @@
     <?php if ( have_rows('movie-people')): ?>
     <section class="souvenir">
         <div class="wrapper">
-            <h2 class="h2-music">Des noms à se souvenir</h2>
+            <h2 class="h2-music" data-scrolly="fromLeft">Des noms à se souvenir</h2>
             <div class="grid-3">
                 <?php while(have_rows('music-people')): the_row(); ?>
                 <div class="card-souvenir">
@@ -147,7 +147,7 @@
     <?php if( $query_favorites ->have_posts() ) : ?>
         <section class="hits">
             <div class="wrapper">
-                <h2 class="h2-music">Les meilleurs hits</h2>
+                <h2 class="h2-music" data-scrolly="fromLeft">Les meilleurs hits</h2>
                 <div class="grid-3">
                     <?php while( $query_favorites->have_posts()): $query_favorites->the_post(); ?>
                         <a href="<?php the_permalink(); ?>" class="card-hits">
