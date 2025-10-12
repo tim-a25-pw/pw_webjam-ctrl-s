@@ -105,46 +105,35 @@
         </div>
     </section>
 
+       <?php if ( have_rows('movie-people')): ?>
     <section class="souvenir">
         <div class="wrapper">
             <h2 class="h2-music">Des noms à se souvenir</h2>
             <div class="grid-3">
-                <div class="card-souvenir card-souvenir_lecture">
+                <?php while(have_rows('movie-people')): the_row(); ?>
+                <div class="card-souvenir">
                     <div class="card__media">
-                        <img src="assets/images/charlieChaplin.png" alt="">
+                        <?php $image = get_sub_field('movie-people-image'); ?>
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                     </div>
                     <div class="card__content">
-                        <h3>Charlie Chaplin</h3>
+                        <h3><?php the_sub_field('movie-people-name'); ?></h3>
                     </div>
                 </div>
-                <div class="card-souvenir card-souvenir_lecture">
-                    <div class="card__media">
-                        <img src="assets/images/alfredHitchcock.png" alt="">
-                    </div>
-                    <div class="card__content">
-                        <h3>Alfred Hitchcock</h3>
-                    </div>
-                </div>
-                <div class="card-souvenir card-souvenir_lecture">
-                    <div class="card__media">
-                        <img src="assets/images/jeanRenoir.png" alt="">
-                    </div>
-                    <div class="card__content">
-                        <h3>Jean Renoir</h3>
-                    </div>
-                </div>
+               <?php endwhile ?>
             </div>
         </div>
     </section>
+    <?php endif ?>
 
     <?php 
         $favorites = array(
-            'post_type'=> 'music',
+            'post_type'=> 'movie',
             'post_status'=> 'publish',
             'posts_per_page '=> -1,
             'meta_query'     => array(
                 array(
-                    'key'     => 'music-favorite',
+                    'key'     => 'movie-favorite',
                     'value'   => '1',
                     'compare' => '='
                 )

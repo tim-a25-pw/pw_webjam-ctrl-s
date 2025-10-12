@@ -106,37 +106,26 @@
         </div>
     </section>
 
+        <?php if ( have_rows('book-people')): ?>
     <section class="souvenir">
         <div class="wrapper">
             <h2 class="h2-music">Des noms à se souvenir</h2>
             <div class="grid-3">
-                <div class="card-souvenir card-souvenir_lecture">
+                <?php while(have_rows('book-people')): the_row(); ?>
+                <div class="card-souvenir">
                     <div class="card__media">
-                        <img src="assets/images/victorHugo.png" alt="">
+                        <?php $image = get_sub_field('book-people-image'); ?>
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                     </div>
                     <div class="card__content">
-                        <h3>Victor Hugo</h3>
+                        <h3><?php the_sub_field('book-people-name'); ?></h3>
                     </div>
                 </div>
-                <div class="card-souvenir card-souvenir_lecture">
-                    <div class="card__media">
-                        <img src="assets/images/virginaWoolf.png" alt="">
-                    </div>
-                    <div class="card__content">
-                        <h3>Virginia Woolf</h3>
-                    </div>
-                </div>
-                <div class="card-souvenir card-souvenir_lecture">
-                    <div class="card__media">
-                        <img src="assets/images/honoreDeBalzac.png" alt="">
-                    </div>
-                    <div class="card__content">
-                        <h3>Honoré de Balzac</h3>
-                    </div>
-                </div>
+               <?php endwhile ?>
             </div>
         </div>
     </section>
+    <?php endif ?>
 
     <?php 
         $favorites = array(
