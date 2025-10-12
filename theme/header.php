@@ -17,7 +17,7 @@
     <script src="<?php bloginfo('template_url') ?>/scripts/main.js" defer></script>
 </head>
 
-<body <?php body_class(); ?>>
+<body data-component="Scrolly" <?php body_class(); ?>>
 
     <header class="header" data-component="Header" data-auto-hide>
         <div class="wrapper">

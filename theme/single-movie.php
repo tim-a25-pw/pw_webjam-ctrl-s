@@ -1,17 +1,14 @@
 <?php get_header(); ?>
 
-<section class="hero-cinema">
+<section class="hero_oeuvre">
     <div class="wrapper">
-        <div class="hero__media">
-            <img src="assets/images/cinemaHero.png" alt="">
-        </div>
-        <div class="hero__content">
-            <h1>Univers du cinéma</h1>
-            <p>
-                L’univers cinématographique est un refuge visuel où renaissent les histoires et les images censurées. Grâce à une immersion en réalité augmentée et en son spatialisé, chaque scène devient un acte de résistance et un pont entre les époques, invitant à redécouvrir, partager et préserver un patrimoine cinématographique libre, critique et vivant face à l’oubli ou à la réécriture de l’histoire.
-            </p>
-        </div>
+        <h3 data-scrolly="fromLeft">Univers du cinéma</h3>
+        <h1 data-scrolly="fromLeft"><?php the_title(); ?></h1>
+        <?php if (get_field('movie-year')) : ?>
+        <h2><?php the_field('movie-year'); ?></h2>
+        <?php endif; ?>
     </div>
+    <img src="<?php bloginfo('url'); ?>/assets/images/hero-oeuvre.png" alt="">
 </section>
 
 <section class="oeuvres">
@@ -19,7 +16,7 @@
         <h2 class="h2-music">Oeuvres</h2>
         <div class="vedette">
             <div class="content">
-                <h3>Les enfants du paradis - 1945</h3>
+                <h3><?php the_title(); ?><?php if (get_field('movie-year')) : ?> - <?php the_field('movie-year'); ?><?php endif; ?></h3>
                 <p>
                     Les Enfants du Paradis (1945) raconte l’amour impossible de Garance pour quatre hommes dans le Paris du XIXᵉ siècle. Le film mêle passion, drame et théâtre populaire.
                 </p>
