@@ -11,145 +11,83 @@
     <img src="<?php bloginfo('url'); ?>/assets/images/hero-oeuvre.png" alt="">
 </section>
 
-<section class="oeuvres">
+<section class="about-oeuvre">
     <div class="wrapper">
-        <h2 class="h2-music">Oeuvres</h2>
-        <div class="vedette">
-            <div class="content">
-                <h3><?php the_title(); ?><?php if (get_field('movie-year')) : ?> - <?php the_field('movie-year'); ?><?php endif; ?></h3>
-                <p>
-                    Les Enfants du Paradis (1945) raconte l’amour impossible de Garance pour quatre hommes dans le Paris du XIXᵉ siècle. Le film mêle passion, drame et théâtre populaire.
-                </p>
+        <div class="oeuvre_texte">
+            <div class="oeuvre_content">
+                <h2 data-scrolly="fromLeft">Sur l'oeuvre</h2>
+                <?php the_content(); ?>
             </div>
-            <div class="media">
-                <img src="assets/images/enfantsParadis.png" alt="">
-            </div>
-        </div>
-        <div class="cards swiper swiper-lecture green" data-component="Carousel" data-direction="vertical" data-slides="2" data-space="55">
-            <div class="custom-pagination"></div>
-            <div class="swiper-wrapper">
-                <div class="card swiper-slide">
-                    <div class="card__media">
-                        <img src="assets/images/cendrillon.png" alt="">
-                    </div>
-                    <div class="card__content">
-                        <h3>Cendrillon - 1950</h3>
-                        <p>
-                            Cendrillon (1950) est un film d’animation de Disney qui raconte l’histoire d’une jeune fille maltraitée par sa belle-mère et ses demi-sœurs, mais qui, grâce à sa marraine la fée, assiste au bal du prince et voit son destin changé.
-                        </p>
-                    </div>
-                </div>
-                <div class="swiper-slide card">
-                    <div class="card__media">
-                        <img src="assets/images/peterpan.png" alt="">
-                    </div>
-                    <div class="card__content">
-                        <h3>Peter Pan - 1964</h3>
-                        <p>
-                            Peter Pan (1964) est un film d’animation de Disney qui suit les aventures de Peter Pan, le garçon qui ne veut pas grandir, et de Wendy, ses frères et la fée Clochette dans le monde magique du Pays Imaginaire, où ils affrontent le capitaine Crochet.
-                        </p>
-                    </div>
-                </div>
-                <div class="swiper-slide card">
-                    <div class="card__media">
-                        <img src="assets/images/edithPiaf.png" alt="">
-                    </div>
-                    <div class="card__content">
-                        <h3>Édith Piaf - La vie en rose</h3>
-                        <p>« La Vie en Rose » (1947) d’Édith Piaf est une chanson emblématique qui exprime la magie de l’amour et la beauté de voir la vie en rose malgré les épreuves. C’est un classique intemporel de la chanson française, plein d’émotion et de douceur.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a href="" class="btn green">Soumettre une oeuvre</a>
-    </div>
-</section>
-
-<section class="interaction">
-    <div class="wrapper">
-        <div class="media">
-            <img src="assets/images/lunetteInteractionCinema.png" alt="">
-        </div>
-        <div class="content">
-            <h2 class="h2-music">Interaction</h2>
-            <p>Les grands classiques du cinéma reprennent vie devant vos yeux. Grâce à un affichage immersif intégré, Vision vous permet de redécouvrir des chefs d’œuvre  comme si l’écran vous enveloppait tout entier, à l’abri de toute censure.</p>
-            <ul>
-                <li><span class="green">Abaissez les lunettes</span> pour lancer la projection.</li>
-                <li><span class="green">Faites glisser votre regard de droite à gauche</span> pour changer de scène, et laissez le film se dérouler autour de vous, entre rêve et réalité.</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="souvenir">
-    <div class="wrapper">
-        <h2 class="h2-music">Des noms à se souvenir</h2>
-        <div class="grid-3">
-            <div class="card-souvenir card-souvenir_lecture">
-                <div class="card__media">
-                    <img src="assets/images/charlieChaplin.png" alt="">
-                </div>
-                <div class="card__content">
-                    <h3>Charlie Chaplin</h3>
-                </div>
-            </div>
-            <div class="card-souvenir card-souvenir_lecture">
-                <div class="card__media">
-                    <img src="assets/images/alfredHitchcock.png" alt="">
-                </div>
-                <div class="card__content">
-                    <h3>Alfred Hitchcock</h3>
-                </div>
-            </div>
-            <div class="card-souvenir card-souvenir_lecture">
-                <div class="card__media">
-                    <img src="assets/images/jeanRenoir.png" alt="">
-                </div>
-                <div class="card__content">
-                    <h3>Jean Renoir</h3>
-                </div>
+            <div class="oeuvre_media">
+                <?php the_post_thumbnail(); ?>
             </div>
         </div>
     </div>
 </section>
 
-<section class="hits">
+<section class="extraits">
     <div class="wrapper">
-        <h2 class="h2-music">Les meilleurs hits</h2>
-        <div class="grid-3">
-            <div class="card-hits card-hits_lecture">
-                <div class="card__media">
-                    <img src="assets/images/enfantsParadis.png" alt="">
+        <h2 data-scrolly="fromLeft">Extraits</h2>
+        <div class="all_extraits">
+            <div class="extraits__content">
+                <div class="extrait">
+                    <p>Garance à Baptitste:</p>
+                    <li>"Je vous ai toujours aimé... pas aujourd’hui, pas demain, mais toujours !"</li>
                 </div>
-                <div class="card__content">
-                    <h3>Les enfants du paradis - 1945</h3>
-                    <p>
-                        Les Enfants du Paradis (1945) raconte l’amour impossible de Garance pour quatre hommes dans le Paris du XIXᵉ siècle. Le film mêle passion, drame et théâtre populaire.
-                    </p>
-                </div>
-            </div>
-            <div class="card-hits card-hits_lecture">
-                <div class="card__media">
-                    <img src="assets/images/cendrillon.png" alt="">
-                </div>
-                <div class="card__content">
-                    <h3>Cendrillon - 1950</h3>
-                    <p>
-                        Cendrillon (1950) est un film d’animation de Disney qui raconte l’histoire d’une jeune fille maltraitée par sa belle-mère et ses demi-sœurs, mais qui, grâce à sa marraine la fée, assiste au bal du prince et voit son destin changé.
-                    </p>
+                <div class="extrait">
+                    <p>Baptiste à Garance:</p>
+                    <li>"Vous êtes le seul être au monde qui sache qui je suis."</li>
                 </div>
             </div>
-            <div class="card-hits card-hits_lecture">
-                <div class="card__media">
-                    <img src="assets/images/peterpan.png" alt="">
+            <div class="extraits__content">
+                <div class="extrait">
+                    <p>Nodier sur le théâtre et la vie :</p>
+                    <li>"Le vrai théâtre, c’est la vie… et la vie, c’est du théâtre."</li>
                 </div>
-                <div class="card__content">
-                    <h3>Peter Pan - 1964</h3>
-                    <p>
-                        Peter Pan (1964) est un film d’animation de Disney qui suit les aventures de Peter Pan, le garçon qui ne veut pas grandir, et de Wendy, ses frères et la fée Clochette dans le monde magique du Pays Imaginaire, où ils affrontent le capitaine Crochet.
-                    </p>
+                <div class="extrait">
+                    <p>Garance à Baptiste :</p>
+                    <li>"Si je vous aime, c’est pour tout ce que vous ne dites pas."</li>
                 </div>
             </div>
+        </div>
+    </div>
+    <img src="assets/images/extraits.png" alt="">
+</section>
+
+<section class="type">
+    <div class="wrapper">
+        <h2 data-scrolly="fromLeft">Type</h2>
+        <div class="types">
+            <div class="type__content">
+               <p>Le film Les Enfants du Paradis (1945) est principalement de type drame romantique et film historique.</p>
+               <p>Plus précisément:</p> 
+               <li><span>Drame romantique</span> : il raconte une histoire d’amour complexe et impossible entre Baptiste et Garance, avec des émotions intenses et des personnages profondément humains.</li>
+               <li><span>Film historique / fresque sociale</span> : il dépeint le Paris du XIXᵉ siècle avec ses théâtres, ses rues populaires et sa haute société, offrant une reconstitution minutieuse de l’époque.</li>
+            </div>
+                <div class="type__content">
+                <li><span>Comédie dramatique et théâtre filmé</span> : certaines scènes mettent en avant le monde du théâtre, avec des moments légers et poétiques qui contrastent avec la gravité du destin des personnages.</li>
+                <li><span>Une dimension poétique et symbolique</span>, car le film transcende la simple intrigue romantique pour explorer les rêves, les passions et la liberté des personnages, transformant chaque geste et chaque décor en métaphore du désir et de l’art.</li>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="realisateur">
+    <div class="wrapper">
+        <h2 data-scrolly="fromLeft">Sur le réalisateur</h2>
+        <p>Marcel Carné (1906‑1996) est l’un des réalisateurs les plus influents du cinéma français, figure majeure du réalisme poétique des années 1930 et 1940. Né à Paris, il commence sa carrière comme assistant-réalisateur avant de diriger ses propres films, souvent en collaboration avec le scénariste Jacques Prévert. Carné se distingue par sa capacité à mêler réalisme social et atmosphère poétique, donnant vie à des histoires ancrées dans le quotidien tout en les imprégnant d’une dimension lyrique et dramatique. Ses œuvres explorent souvent des thèmes tels que l’amour impossible, le destin tragique et la condition humaine, avec des personnages profondément humains évoluant dans des décors minutieusement construits. Parmi ses films les plus célèbres figurent Le Jour se Lève (1939), Les Visiteurs du Soir (1942) et bien sûr Les Enfants du Paradis (1945), considéré comme son chef-d’œuvre. Marcel Carné a marqué l’histoire du cinéma français par sa maîtrise de la narration, sa sensibilité artistique et sa capacité à capturer la beauté et la mélancolie de la vie quotidienne.</p>
+    </div>
+</section>
+
+<section class="suivante_precedente">
+    <div class="wrapper">
+        <div class="nav_fleche">
+            <div class="precedente">
+                <h3> < Oeuvre précédente </h3>
+            </div>
+            <div class="prochaine">
+                <h3>Prochaine oeuvre ></h3>
+            </div> 
         </div>
     </div>
 </section>
