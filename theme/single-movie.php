@@ -8,7 +8,7 @@
         <h2><?php the_field('movie-year'); ?></h2>
         <?php endif; ?>
     </div>
-    <img src="<?php bloginfo('url'); ?>/assets/images/hero-oeuvre.png" alt="">
+    <img src="<?php bloginfo('template_url'); ?>/assets/images/hero-oeuvre.png" alt="">
 </section>
 
 <section class="about-oeuvre">
@@ -25,57 +25,45 @@
     </div>
 </section>
 
+<?php if (have_rows('movie-quotes')): ?>
 <section class="extraits">
     <div class="wrapper">
         <h2 data-scrolly="fromLeft">Extraits</h2>
         <div class="all_extraits">
-            <div class="extraits__content">
+            <?php while(have_rows('movie-quotes')) : the_row(); ?>
                 <div class="extrait">
-                    <p>Garance à Baptitste:</p>
-                    <li>"Je vous ai toujours aimé... pas aujourd’hui, pas demain, mais toujours !"</li>
+                    <p><?php the_sub_field('movie-quotes-title'); ?></p>
+                    <li><?php the_sub_field('movie-quotes-text'); ?></li>
                 </div>
-                <div class="extrait">
-                    <p>Baptiste à Garance:</p>
-                    <li>"Vous êtes le seul être au monde qui sache qui je suis."</li>
-                </div>
-            </div>
-            <div class="extraits__content">
-                <div class="extrait">
-                    <p>Nodier sur le théâtre et la vie :</p>
-                    <li>"Le vrai théâtre, c’est la vie… et la vie, c’est du théâtre."</li>
-                </div>
-                <div class="extrait">
-                    <p>Garance à Baptiste :</p>
-                    <li>"Si je vous aime, c’est pour tout ce que vous ne dites pas."</li>
-                </div>
-            </div>
+            <?php endwhile; ?>
         </div>
     </div>
-    <img src="assets/images/extraits.png" alt="">
+    <img src="<?php bloginfo('template_url'); ?>/assets/images/extraits.png" alt="">
 </section>
+<?php endif; ?>
 
 <section class="type">
     <div class="wrapper">
         <h2 data-scrolly="fromLeft">Type</h2>
+        <?php if (get_field('movie-type-subtitle')) : ?>
+            <p><?php the_field('movie-type-subtitle'); ?></p>
+        <?php endif; ?>
+        <?php if (have_rows('movie-type-list')): ?>
         <div class="types">
-            <div class="type__content">
-               <p>Le film Les Enfants du Paradis (1945) est principalement de type drame romantique et film historique.</p>
-               <p>Plus précisément:</p> 
-               <li><span>Drame romantique</span> : il raconte une histoire d’amour complexe et impossible entre Baptiste et Garance, avec des émotions intenses et des personnages profondément humains.</li>
-               <li><span>Film historique / fresque sociale</span> : il dépeint le Paris du XIXᵉ siècle avec ses théâtres, ses rues populaires et sa haute société, offrant une reconstitution minutieuse de l’époque.</li>
-            </div>
-                <div class="type__content">
-                <li><span>Comédie dramatique et théâtre filmé</span> : certaines scènes mettent en avant le monde du théâtre, avec des moments légers et poétiques qui contrastent avec la gravité du destin des personnages.</li>
-                <li><span>Une dimension poétique et symbolique</span>, car le film transcende la simple intrigue romantique pour explorer les rêves, les passions et la liberté des personnages, transformant chaque geste et chaque décor en métaphore du désir et de l’art.</li>
-            </div>
+            <?php while(have_rows('movie-type-list')) : the_row(); ?>
+                <li><?php the_sub_field('movie-type-description'); ?></li>
+            <?php endwhile; ?>
         </div>
+        <?php endif; ?>
     </div>
 </section>
 
 <section class="realisateur">
     <div class="wrapper">
         <h2 data-scrolly="fromLeft">Sur le réalisateur</h2>
-        <p>Marcel Carné (1906‑1996) est l’un des réalisateurs les plus influents du cinéma français, figure majeure du réalisme poétique des années 1930 et 1940. Né à Paris, il commence sa carrière comme assistant-réalisateur avant de diriger ses propres films, souvent en collaboration avec le scénariste Jacques Prévert. Carné se distingue par sa capacité à mêler réalisme social et atmosphère poétique, donnant vie à des histoires ancrées dans le quotidien tout en les imprégnant d’une dimension lyrique et dramatique. Ses œuvres explorent souvent des thèmes tels que l’amour impossible, le destin tragique et la condition humaine, avec des personnages profondément humains évoluant dans des décors minutieusement construits. Parmi ses films les plus célèbres figurent Le Jour se Lève (1939), Les Visiteurs du Soir (1942) et bien sûr Les Enfants du Paradis (1945), considéré comme son chef-d’œuvre. Marcel Carné a marqué l’histoire du cinéma français par sa maîtrise de la narration, sa sensibilité artistique et sa capacité à capturer la beauté et la mélancolie de la vie quotidienne.</p>
+        <?php if (get_field('movie-director-text')) : ?>
+            <p><?php the_field('movie-director-text'); ?></p>
+        <?php endif; ?>    
     </div>
 </section>
 
@@ -83,10 +71,10 @@
     <div class="wrapper">
         <div class="nav_fleche">
             <div class="precedente">
-                <h3> < Oeuvre précédente </h3>
+                <span class="h3"><?php previous_post_link('&lt; %link'); ?></span>
             </div>
             <div class="prochaine">
-                <h3>Prochaine oeuvre ></h3>
+                <span class="h3"><?php next_post_link('&gt; %link'); ?></span>
             </div> 
         </div>
     </div>

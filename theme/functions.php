@@ -5,7 +5,10 @@ add_theme_support('post-thumbnails');
 
 // Menu
 function creer_menu() {
-	register_nav_menu('menu_principal', 'Menu principal');
+	register_nav_menus(array(
+    'menu_principale' => 'Zone principale',
+	'menu_footer' => 'Zone footer'
+));
 }
 add_action('init', 'creer_menu');
 

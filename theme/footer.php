@@ -7,14 +7,13 @@
                 </svg>
             </div>
             <div class="footer__nav">
-                <nav class="nav-footer">
-                    <ul>
-                        <li><a href="cinema.html">Cinéma</a></li>
-                        <li><a href="music.html">Musique</a></li>
-                        <li><a href="lecture.html">Lecture</a></li>
-                        <li><a href="team.html">Équipe</a></li>
-                    </ul>
-                </nav>
+                <?php wp_nav_menu(array(
+                'theme_location' => 'menu_footer',
+                'menu'				=> "menu_footer", // (int|string|WP_Term) Desired menu. Accepts a menu ID, slug, name, or object.
+                'menu_class'		=> "nav__menu", // (string) CSS class to use for the ul element which forms the menu. Default 'menu'.
+                'container'			=> "nav", // (string) Whether to wrap the ul, and what to wrap it with. Default 'div'.
+                'container_class'	=> "nav-footer", // (string) Class that is applied to the container. Default 'menu-{menu slug}-container'.
+            )); ?>
             </div>
             <div class="button">
                 <a href="" class="btn btn_footer">Soumettre une oeuvre</a>
