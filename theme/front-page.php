@@ -1,0 +1,83 @@
+<?php get_header(); ?>
+
+    <section class="hero-accueil">
+    <div class="wrapper">
+        <div class="hero-media">
+            <img src="<?php bloginfo('template_url') ?>/assets/images/hero__bg.png" alt="" />
+        </div>
+        <div class="hero-content">
+            <div class="hero-title">
+                <h1>La liberté</h1>
+                <div class="hero-title-indent">
+                    <h2>À portée de regard</h2>
+                    <p>Connecte-toi à la mémoire collective. Résiste par la vision.</p>
+                </div>
+            </div>
+            <div class="hero-intro">
+                <p>Dans un monde où la culture est effacée, Vision te rend l’accès à ce qu’ils ont voulu cacher.</p>
+                <p>Lis les livres interdits, regarde les films censurés, écoute les musiques bannies — tout à travers une simple paire de lunettes.</p>
+            </div>
+            <div class="hero-down">
+                <a href="" class="hero-scrolldown">
+                    <p>En savoir plus</p>
+                    <svg class="icon icon--lg">
+                        <use href="#icon-chevron_down"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="arguments">
+    <div class="wrapper">
+        <div class="argument-media"><img src="<?php bloginfo('template_url') ?>/assets/images/vision-demo.png" alt="Personne portant des lunettes Visions" /></div>
+        <div class="argument-content">
+            <h2>Pourquoi vision?</h2>
+            <ul>
+                <li>
+                    Les verres diffusent des
+                    <strong>écrans flottants</strong>
+                    invisibles à l’œil nu.
+                </li>
+                <li>
+                    Connexion à un
+                    <strong>réseau sécurisé</strong>
+                    .
+                </li>
+                <li>
+                    Apparence sobre et minimaliste, il est
+                    <strong>impossible de les distinguer</strong>
+                    des lunettes ordinaires.
+                </li>
+                <li>
+                    Suffisant d’une recharge pour
+                    <strong>72 heures</strong>
+                    de travail.
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="universe-list">
+    <div class="wrapper">
+        <h2>Découvrez l'interdit</h2>
+        <div class="universe-cards">
+            <div class="universe-card">
+                <img src="<?php bloginfo('template_url') ?>/assets/images/univers-musical.jpg" alt="" />
+                <h3>Univers musical</h3>
+            </div>
+            <div class="universe-card">
+                <img src="<?php bloginfo('template_url') ?>/assets/images/univers-lecture.jpg" alt="" />
+                <h3>Univers de lecture</h3>
+            </div>
+            <div class="universe-card">
+                <img src="<?php bloginfo('template_url') ?>/assets/images/univers-cinema.jpg" alt="" />
+                <h3>Univers du cinéma</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<?php get_footer(); ?>

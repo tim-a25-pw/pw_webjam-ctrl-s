@@ -2,7 +2,7 @@
 
     <div class="wrapper">
         <h1 style="margin-top: 100px">404</h1>
-        <h2 style="margin-bottom: 100px">Cette page n’a pas pu être trouvée. Ou bien est-elle encore en train de cuire? 🧑‍🍳</h2>
+        <h2 style="margin-bottom: 100px">Cette page n’a pas pu être trouvée. Ou bien a-t-elle été censurée?</h2>
         <?php 
                 $link = get_field('link_homepage', 'option');
                 if( $link ): 

@@ -1,0 +1,150 @@
+<?php get_header(); ?>
+
+<section class="hero-music">
+    <div class="wrapper">
+        <div class="hero__media">
+            <img src="assets/images/musiqueHero.png" alt="">
+        </div>
+        <div class="hero__content">
+            <h1>Univers musical</h1>
+            <p>L’univers musical est un refuge sonore où renaissent les voix et les œuvres censurées, mêlant les hymnes engagés d’Aretha Franklin, la poésie électrique de Jimi Hendrix, la douceur intemporelle d’Édith Piaf. Grâce à une immersion audio binaurale, chaque chanson devient un acte de résistance et un pont entre les générations, invitant à redécouvrir, partager et préserver un patrimoine culturel libre, critique et vivant face à la réécriture du passé.</p>
+        </div>
+    </div>
+</section>
+
+<section class="oeuvres">
+    <div class="wrapper">
+        <h2 class="h2-music">Oeuvres</h2>
+        <div class="vedette">
+            <div class="content">
+                <h3>The Beatles - Let It Be</h3>
+                <p>
+                    Let It Be est le dernier album publié des Beatles, sorti en 1970. Il marque la fin du groupe, avec une atmosphère à la fois nostalgique et tendue. L’album mélange des chansons introspectives comme Let It Be ou The Long and Winding Road, et des titres plus bruts et spontanés comme Get Back. Bien qu’il ait été enregistré avant Abbey Road, il est sorti après, accompagné d’un film documentaire montrant les sessions souvent conflictuelles.
+                </p>
+            </div>
+            <div class="media">
+                <img src="assets/images/beatles.png" alt="">
+            </div>
+        </div>
+        <div class="cards swiper" data-component="Carousel" data-direction="vertical" data-slides="2" data-space="55">
+            <div class="custom-pagination"></div>
+            <div class="swiper-wrapper">
+                <div class="card swiper-slide">
+                    <div class="card__media">
+                        <img src="assets/images/edithPiaf.png" alt="">
+                    </div>
+                    <div class="card__content">
+                        <h3>Édith Piaf - La vie en rose</h3>
+                        <p>« La Vie en Rose » (1947) d’Édith Piaf est une chanson emblématique qui exprime la magie de l’amour et la beauté de voir la vie en rose malgré les épreuves. C’est un classique intemporel de la chanson française, plein d’émotion et de douceur.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide card">
+                    <div class="card__media">
+                        <img src="assets/images/edithPiaf.png" alt="">
+                    </div>
+                    <div class="card__content">
+                        <h3>Édith Piaf - La vie en rose</h3>
+                        <p>« La Vie en Rose » (1947) d’Édith Piaf est une chanson emblématique qui exprime la magie de l’amour et la beauté de voir la vie en rose malgré les épreuves. C’est un classique intemporel de la chanson française, plein d’émotion et de douceur.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide card">
+                    <div class="card__media">
+                        <img src="assets/images/edithPiaf.png" alt="">
+                    </div>
+                    <div class="card__content">
+                        <h3>Édith Piaf - La vie en rose</h3>
+                        <p>« La Vie en Rose » (1947) d’Édith Piaf est une chanson emblématique qui exprime la magie de l’amour et la beauté de voir la vie en rose malgré les épreuves. C’est un classique intemporel de la chanson française, plein d’émotion et de douceur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="" class="btn">Soumettre une oeuvre</a>
+    </div>
+</section>
+
+<section class="interaction">
+    <div class="wrapper">
+        <div class="media">
+            <img src="assets/images/lunetteInteraction.png" alt="">
+        </div>
+        <div class="content">
+            <h2 class="h2-music">Interaction</h2>
+            <h3>Écouteurs à vibration</h3>
+            <p>La musique prend vie autour de vous grâce à un son binaural immersif transmis par vibration osseuse. Chaque note et chaque voix résonnent avec une clarté saisissante, comme si l’artiste jouait à vos côtés — une expérience libre, pure et sans censure.</p>
+            <ul>
+                <li><span>Tapotez la branche</span> pour activer la musique</li>
+                <li><span>Clignez deux fois</span> pour mettre en pause la lecture</li>
+                <li><span>Glissez le regard</span> de droite à gauche pour changer de chanson</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="souvenir">
+    <div class="wrapper">
+        <h2 class="h2-music">Des noms à se souvenir</h2>
+        <div class="grid-3">
+            <div class="card-souvenir">
+                <div class="card__media">
+                    <img src="assets/images/elvisCard.png" alt="">
+                </div>
+                <div class="card__content">
+                    <h3>Elvis Presley</h3>
+                </div>
+            </div>
+            <div class="card-souvenir">
+                <div class="card__media">
+                    <img src="assets/images/beatlesCard.png" alt="">
+                </div>
+                <div class="card__content">
+                    <h3>The Beatles</h3>
+                </div>
+            </div>
+            <div class="card-souvenir">
+                <div class="card__media">
+                    <img src="assets/images/edithCard.png" alt="">
+                </div>
+                <div class="card__content">
+                    <h3>Édith Piaf</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hits">
+    <div class="wrapper">
+        <h2 class="h2-music">Les meilleurs hits</h2>
+        <div class="grid-3">
+            <div class="card-hits">
+                <div class="card__media">
+                    <img src="assets/images/johnnyCash.png" alt="">
+                </div>
+                <div class="card__content">
+                    <h3>Johnny Cash - Ring of fire</h3>
+                    <p>« Ring of Fire » (1963) de Johnny Cash est une chanson country emblématique, connue pour sa mélodie entraînante et ses cuivres caractéristiques. Elle parle de la puissance intense et parfois brûlante de l’amour.</p>
+                </div>
+            </div>
+            <div class="card-hits">
+                <div class="card__media">
+                    <img src="assets/images/jimmyHendrix.png" alt="">
+                </div>
+                <div class="card__content">
+                    <h3>Jimi Hendrix - Purple Haze</h3>
+                    <p>« Purple Haze » (1967) de Jimi Hendrix est un classique du rock psychédélique, célèbre pour son riff de guitare électrique innovant et son ambiance hypnotique. La chanson reflète l’esprit libre et expérimental des années 60.</p>
+                </div>
+            </div>
+            <div class="card-hits">
+                <div class="card__media">
+                    <img src="assets/images/yvesMontand.png" alt="">
+                </div>
+                <div class="card__content">
+                    <h3>Yves Montand - C'est si bon</h3>
+                    <p>« C’est si bon » (1947) d’Yves Montand est une chanson joyeuse et élégante qui célèbre la douceur et le plaisir de la vie. Un classique de la chanson française devenu un standard international.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<?php get_footer(); ?>
