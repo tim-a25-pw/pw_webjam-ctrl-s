@@ -9,8 +9,8 @@
     --font-size-content: #{typo(16px, 18px)};
 
     /// Grosseur des textes
-    --font-size-h1: #{typo(112px)};
-    --font-size-h2: #{typo(62px)};
+    --font-size-h1: #{typo(48px, 112px)};
+    --font-size-h2: #{typo(32px, 62px)};
     --font-size-h3: #{typo(42px)};
     --font-size-h4: #{typo(32px)};
 }

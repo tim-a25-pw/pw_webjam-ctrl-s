@@ -31,9 +31,6 @@
         z-index: 2;
     }
 
-    @media screen and (min-width: $breakpoint-lg) {
-        padding: 0 var(--spacing-lg);
-    }
     .header-is-hidden.is-scrolling-down:not(.nav-is-active) &{
         transform: translateY(-100%) translateY(4px);
     }
