@@ -7,12 +7,12 @@
                 </svg>
             </div>
             <div class="footer__nav">
-                <nav class="nav-primary">
+                <nav class="nav-footer">
                     <ul>
-                        <li><a href="" class="nav-primary__item">Cinéma</a></li>
-                        <li><a href="music.html" class="nav-primary__item">Musique</a></li>
-                        <li><a href="" class="nav-primary__item">Lecture</a></li>
-                        <li><a href="" class="nav-primary__item">Équipe</a></li>
+                        <li><a href="cinema.html">Cinéma</a></li>
+                        <li><a href="music.html">Musique</a></li>
+                        <li><a href="lecture.html">Lecture</a></li>
+                        <li><a href="team.html">Équipe</a></li>
                     </ul>
                 </nav>
             </div>
@@ -25,4 +25,5 @@
 </footer>    
     <?php wp_footer(); ?>
     </body>
-</html>
+</html> 
+
