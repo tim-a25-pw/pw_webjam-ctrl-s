@@ -1,11 +1,11 @@
 <footer class="footer">
     <div class="wrapper">
         <div class="footer__content">
-            <div class="footer__logo">
+            <a href="<?php bloginfo('url'); ?>" class="footer__logo">
                 <svg class="icon icon__brand">
                     <use href="#icon-logo"></use>
                 </svg>
-            </div>
+            </a>
             <div class="footer__nav">
                 <?php wp_nav_menu(array(
                 'theme_location' => 'menu_footer',
