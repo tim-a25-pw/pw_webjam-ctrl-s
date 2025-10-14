@@ -43,6 +43,10 @@
     color: var(--color-black);
 }
 
+.oeuvre_media img{
+    height: 100%;
+}
+
 .oeuvre_content{
     h2{
         font-size: typo(112px);
@@ -153,4 +157,10 @@
 
 .suivante_precedente{
     padding: 43px 0 97px;
+
+    span{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
 }

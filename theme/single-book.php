@@ -73,7 +73,7 @@
                 <span class="h3"><?php previous_post_link('&lt; %link'); ?></span>
             </div>
             <div class="prochaine">
-                <span class="h3"><?php next_post_link('&gt; %link'); ?></span>
+                <span class="h3"><?php next_post_link('%link', '%title &gt;'); ?></span>
             </div> 
         </div>
     </div>

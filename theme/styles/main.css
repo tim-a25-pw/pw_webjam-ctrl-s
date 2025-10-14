@@ -2867,6 +2867,10 @@ a {
   color: var(--color-black);
 }
 
+.oeuvre_media img {
+  height: 100%;
+}
+
 .oeuvre_content h2 {
   font-size: 7rem;
   font-family: "MuseoModerno", sans-serif;
@@ -2964,6 +2968,11 @@ a {
 
 .suivante_precedente {
   padding: 43px 0 97px;
+}
+.suivante_precedente span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .hero-form {

@@ -1,0 +1,156 @@
+<?php get_header(); ?>
+
+<section class="hero-accueil hero-team">
+    <div class="wrapper hero-team">
+        <div class="hero-media">
+            <img src="assets/images/hero__bg.png" alt="" />
+        </div>
+        <div class="hero-content">
+            <div class="hero-title-container">
+                <div class="hero-title">
+                    <h1>CTRL + S</h1>
+                    <div class="hero-title-indent">
+                        <h2>sauvegardons la culture</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-down">
+                <a href="" class="hero-scrolldown">
+                    <p>En savoir plus</p>
+                    <svg class="icon icon--lg">
+                        <use href="#icon-chevron_down"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="team">
+    <div class="wrapper">
+        <div class="team-about">
+            <div class="team-about__content">
+                <h2>
+                    À propos
+                </h2>
+                <p>
+                        Nous sommes un collectif de créateurs et de penseurs unis par une même conviction : la culture doit rester libre. Dans un monde où les œuvres sont censurées et les voix effacées, nous avons conçu ces lunettes comme un acte de résistance, un moyen de redonner à chacun le pouvoir de voir, d’écouter et de rêver sans filtres, sans frontières et sans peur.
+                </p>
+            </div>
+            <div class="team-about__media">
+                <img src="assets/images/teamAbout.jpg" alt="Photo de l'équipe de Vision">
+            </div>
+        </div>
+
+        <div class="teammates">
+            <h2>
+                Notre équipe
+            </h2>
+            <div class="cards_teammates">
+                <!-- Teammate 01 -->
+                <div class="card_teammate">
+                    <div class="card_teammate__media">
+                        <img src="assets/images/amyeliya.jpg" alt="Photo d'Amyeliya">
+                    </div>
+                    <div class="card_teammate__content">
+                        <h3>
+                            Amyeliya Sulytska
+                        </h3>
+                        <h4>
+                            Designer
+                        </h4>
+                        <p>
+                            Designer de produit, je transforme les idées en objets porteurs de sens. Ces lunettes incarnent ma vision d’un design engagé : allier esthétique et liberté pour redonner à chacun le pouvoir de créer, de voir et de ressentir autrement.
+                        </p>
+                    </div>
+                </div>
+                <div class="video_teammate">
+                    <div class="video" data-component="Youtube" data-video-id="QIWa7wEPvX8" data-no-controls>
+                            <div class="video__media js-video">
+                                <img class="js-poster" src="assets/images/amyeliya.jpg" alt="Spectacle de musique" />
+                                <div class="icon_container">
+                                    <svg class="icon">
+                                        <use xlink:href="#icon-play"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+                <!-- Teammate 02 -->
+                <div class="card_teammate">
+                    <div class="card_teammate__media">
+                        <img src="assets/images/maena.jpg" alt="Photo de Maëna">
+                    </div>
+                    <div class="card_teammate__content">
+                        <h3>
+                            Maëna Jenesse
+                        </h3>
+                        <h4>
+                            Designer
+                        </h4>
+                        <p>
+                            Je suis designer d’expérience. À travers Vision, je cherche à créer des émotions plutôt que des objets : des moments où le regard devient un acte de liberté, où la création ouvre un espace de dialogue entre soi et le monde.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Teammate 03 -->
+                <div class="card_teammate">
+                    <div class="card_teammate__media">
+                        <img src="assets/images/coralie.jpg" alt="Photo de Coralie">
+                    </div>
+                    <div class="card_teammate__content">
+                        <h3>
+                            Coralie Thibault
+                        </h3>
+                        <h4>
+                            Animatrice 3D
+                        </h4>
+                        <p>
+                            J’interviens au cœur du processus de création des lunettes. Mon rôle est de donner forme et mouvement à chaque détail avant leur fabrication. Grâce à la modélisation et à l’animation, je rends visibles les idées, les proportions et les gestes qui donneront vie à l’objet.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Teammate 04 -->
+                <div class="card_teammate">
+                    <div class="card_teammate__media">
+                        <img src="assets/images/amelie.jpg" alt="Photo d'Amélie">
+                    </div>
+                    <div class="card_teammate__content">
+                        <h3>
+                            Amélie Cousineau
+                        </h3>
+                        <h4>
+                            Programmeuse
+                        </h4>
+                        <p>
+                            Je donne une âme numérique aux Lunettes Vision. Mon travail consiste à traduire les idées de l’équipe en interactions réelles : des gestes, des capteurs et des réactions lumineuses qui répondent à l’utilisateur. Entre code et création, je cherche l’équilibre entre la logique et la sensibilité.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Teammate 05 -->
+                <div class="card_teammate">
+                    <div class="card_teammate__media">
+                        <img src="assets/images/guillaume.jpg" alt="Photo de Guillaume">
+                    </div>
+                    <div class="card_teammate__content">
+                        <h3>
+                            Guillaume Callebert
+                        </h3>
+                        <h4>
+                            Programmeur
+                        </h4>
+                        <p>
+                            Je suis programmeur, et je façonne l’envers du visible. Derrière les Lunettes Vision, je conçois les systèmes qui rendent l’expérience fluide et interactive. Mon travail relie la technique à l’intention : chaque ligne de code traduit une idée, chaque algorithme soutient une émotion.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<?php get_footer(); ?>

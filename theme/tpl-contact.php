@@ -8,7 +8,6 @@
     <div class="wrapper">
         <div class="form__content">
             <div class="hero-title">
-                <h1 data-scrolly="fromLeft"><?php the_title(); ?></h1>
                 <div class="hero-title-indent">
                     
                 </div>
